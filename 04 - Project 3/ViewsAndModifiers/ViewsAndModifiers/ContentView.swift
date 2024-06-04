@@ -5,27 +5,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var useRedText = false
     
     var body: some View {
-        Button("Tap me!", systemImage: "heart") {
-            useRedText.toggle()
+        GridStack(rows: 4, columns: 4) { row, col in
+            HStack {
+                Image(systemName: "\(row * 4 + col).circle")
+                Text("R\(row) C\(col)")
+            }
         }
-        .frame(width: 150, height: 80)
-        .tint(useRedText ? .red : .accentColor)
-        
-        Button("Button with no tint set to it", systemImage: "heart") {
-//            useRedText.toggle()
-        }
-        .frame(width: 150, height: 80)
-        .tint(useRedText ? .red : .blue)
-        
-        Button("No, tap me!", systemImage: "star") {
-            useRedText.toggle()
-        }
-        .frame(width: 150, height: 80)
-        .foregroundStyle(useRedText ? .red : .accentColor)
-
     }
 }
 
