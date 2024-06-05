@@ -55,6 +55,7 @@ struct ContentView: View {
                 }
                 Section("Total amount") { // Challenge 2
                     Text(total, format: .currency(code: currencyCode))
+                        .foregroundStyle(tipPercentage == 0 ? .red : .black)
                 }
                 Section("Amount per person") { // Challenge 1
                     Text(totalPerPerson, format: .currency(code: currencyCode))
