@@ -11,6 +11,11 @@
 		EDA349D02C10798E009BEE9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349CF2C10798E009BEE9A /* ContentView.swift */; };
 		EDA349D22C107992009BEE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA349D12C107992009BEE9A /* Assets.xcassets */; };
 		EDA349D52C107992009BEE9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA349D42C107992009BEE9A /* Preview Assets.xcassets */; };
+		EDA349E02C119438009BEE9A /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349DF2C119438009BEE9A /* GameLogic.swift */; };
+		EDA349E22C119F0E009BEE9A /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E12C119F0E009BEE9A /* GameViewModel.swift */; };
+		EDA349E52C11A249009BEE9A /* AttemptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E42C11A249009BEE9A /* AttemptsView.swift */; };
+		EDA349E72C11A25D009BEE9A /* AttemptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */; };
+		EDA349E92C11AEAD009BEE9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E82C11AEAD009BEE9A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		EDA349CF2C10798E009BEE9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EDA349D12C107992009BEE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDA349D42C107992009BEE9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDA349DF2C119438009BEE9A /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		EDA349E12C119F0E009BEE9A /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		EDA349E42C11A249009BEE9A /* AttemptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptsView.swift; sourceTree = "<group>"; };
+		EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptsViewModel.swift; sourceTree = "<group>"; };
+		EDA349E82C11AEAD009BEE9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +61,12 @@
 		EDA349CC2C10798E009BEE9A /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
+				EDA349E82C11AEAD009BEE9A /* Constants.swift */,
 				EDA349CD2C10798E009BEE9A /* RockPaperScissorsApp.swift */,
+				EDA349DF2C119438009BEE9A /* GameLogic.swift */,
+				EDA349E12C119F0E009BEE9A /* GameViewModel.swift */,
 				EDA349CF2C10798E009BEE9A /* ContentView.swift */,
+				EDA349E32C11A230009BEE9A /* AttemptsView */,
 				EDA349D12C107992009BEE9A /* Assets.xcassets */,
 				EDA349D32C107992009BEE9A /* Preview Content */,
 			);
@@ -65,6 +79,15 @@
 				EDA349D42C107992009BEE9A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDA349E32C11A230009BEE9A /* AttemptsView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA349E42C11A249009BEE9A /* AttemptsView.swift */,
+				EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */,
+			);
+			path = AttemptsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA349E72C11A25D009BEE9A /* AttemptsViewModel.swift in Sources */,
+				EDA349E22C119F0E009BEE9A /* GameViewModel.swift in Sources */,
+				EDA349E52C11A249009BEE9A /* AttemptsView.swift in Sources */,
+				EDA349E02C119438009BEE9A /* GameLogic.swift in Sources */,
+				EDA349E92C11AEAD009BEE9A /* Constants.swift in Sources */,
 				EDA349D02C10798E009BEE9A /* ContentView.swift in Sources */,
 				EDA349CE2C10798E009BEE9A /* RockPaperScissorsApp.swift in Sources */,
 			);

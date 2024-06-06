@@ -1,36 +1,30 @@
 import SwiftUI
 
-enum Move: String, CaseIterable {
-    case rock = "Rock"
-    case paper = "Paper"
-    case scissors = "Scissors"
-}
-
 struct ContentView: View {
-    @State private var currentChoice: Move = Move.allCases.randomElement() ?? .rock
+    var viewModel: GameViewModel
+    
+    @State private var currentChoice = Constants.possibleMoves.randomElement()
     @State private var playerShouldWin: Bool = Bool.random()
     @State private var score = 0
-    
-    private let maxAttempts = 10
-    private var possibleMoves = [Move.rock, Move.paper, Move.scissors]
+    @State private var infoText = ""
     
     var body: some View {
         VStack {
             HStack {
-                AttemptsView(attemptsLeft: 5, maxAttempts: 10)
+                AttemptsView(viewModel: AttemptsViewModel(remainingAttempts: 5, maxAttempts: 10))
                 Spacer()
                 ScoreView(score: score)
             }
             Spacer()
-            Text("Wrong answer 🙁")
-                .font(.headline)
+            Text(infoText)
+                .font(.largeTitle)
             Spacer()
             CircleView( size: 100, emoji: "✊")
             Spacer()
             Spacer()
             VStack {
                 HStack {
-                    ForEach(possibleMoves, id: \.self) { move in
+                    ForEach(Constants.possibleMoves, id: \.self) { move in
                         CircleView( size: 50, emoji: getEmojiFor(move: move))
                     }
                 }
@@ -60,24 +54,8 @@ struct CircleView: View {
         Text(emoji)
             .frame(width: size, height: size)
             .padding()
-            .background(Circle().fill(RadialGradient(colors: [.teal, .brown], center: .center, startRadius: 0, endRadius: 150)))
+            .background(Circle().fill(RadialGradient(colors: [.teal, .yellow, .white], center: .center, startRadius: 0, endRadius: 350)))
             
-    }
-}
-
-struct AttemptsView: View {
-    var attemptsLeft: Int
-    var maxAttempts: Int
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text("Attempts left")
-            HStack(spacing: 0) {
-                ForEach(0..<maxAttempts, id: \.self) { index in
-                    index <= attemptsLeft ? Image(systemName: "heart.fill") : Image(systemName: "heart")
-                }
-            }
-        }
     }
 }
 
@@ -93,5 +71,5 @@ struct ScoreView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(viewModel: GameViewModel())
 }
