@@ -16,6 +16,8 @@
 		EDA349E52C11A249009BEE9A /* AttemptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E42C11A249009BEE9A /* AttemptsView.swift */; };
 		EDA349E72C11A25D009BEE9A /* AttemptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */; };
 		EDA349E92C11AEAD009BEE9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E82C11AEAD009BEE9A /* Constants.swift */; };
+		EDA349EC2C11B188009BEE9A /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349EB2C11B188009BEE9A /* ScoreView.swift */; };
+		EDA349EE2C11B195009BEE9A /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		EDA349E42C11A249009BEE9A /* AttemptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptsView.swift; sourceTree = "<group>"; };
 		EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptsViewModel.swift; sourceTree = "<group>"; };
 		EDA349E82C11AEAD009BEE9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EDA349EB2C11B188009BEE9A /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				EDA349E12C119F0E009BEE9A /* GameViewModel.swift */,
 				EDA349CF2C10798E009BEE9A /* ContentView.swift */,
 				EDA349E32C11A230009BEE9A /* AttemptsView */,
+				EDA349EA2C11B169009BEE9A /* ScoreView */,
 				EDA349D12C107992009BEE9A /* Assets.xcassets */,
 				EDA349D32C107992009BEE9A /* Preview Content */,
 			);
@@ -88,6 +93,15 @@
 				EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */,
 			);
 			path = AttemptsView;
+			sourceTree = "<group>";
+		};
+		EDA349EA2C11B169009BEE9A /* ScoreView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA349EB2C11B188009BEE9A /* ScoreView.swift */,
+				EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */,
+			);
+			path = ScoreView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,10 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA349E72C11A25D009BEE9A /* AttemptsViewModel.swift in Sources */,
+				EDA349EC2C11B188009BEE9A /* ScoreView.swift in Sources */,
 				EDA349E22C119F0E009BEE9A /* GameViewModel.swift in Sources */,
 				EDA349E52C11A249009BEE9A /* AttemptsView.swift in Sources */,
 				EDA349E02C119438009BEE9A /* GameLogic.swift in Sources */,
 				EDA349E92C11AEAD009BEE9A /* Constants.swift in Sources */,
+				EDA349EE2C11B195009BEE9A /* ScoreViewModel.swift in Sources */,
 				EDA349D02C10798E009BEE9A /* ContentView.swift in Sources */,
 				EDA349CE2C10798E009BEE9A /* RockPaperScissorsApp.swift in Sources */,
 			);

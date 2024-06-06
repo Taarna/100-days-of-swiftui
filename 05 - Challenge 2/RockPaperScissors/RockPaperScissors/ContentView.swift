@@ -13,7 +13,7 @@ struct ContentView: View {
             HStack {
                 AttemptsView(viewModel: AttemptsViewModel(remainingAttempts: 5, maxAttempts: 10))
                 Spacer()
-                ScoreView(score: score)
+                ScoreView(viewModel: ScoreViewModel(score: score))
             }
             Spacer()
             Text(infoText)
@@ -56,17 +56,6 @@ struct CircleView: View {
             .padding()
             .background(Circle().fill(RadialGradient(colors: [.teal, .yellow, .white], center: .center, startRadius: 0, endRadius: 350)))
             
-    }
-}
-
-struct ScoreView: View {
-    var score: Int
-    
-    var body: some View {
-        VStack(alignment: .trailing) {
-            Text("Score")
-            Text("\(score)")
-        }
     }
 }
 
