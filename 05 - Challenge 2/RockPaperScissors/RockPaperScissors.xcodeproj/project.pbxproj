@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDA349CE2C10798E009BEE9A /* RockPaperScissorsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349CD2C10798E009BEE9A /* RockPaperScissorsApp.swift */; };
+		EDA349D02C10798E009BEE9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349CF2C10798E009BEE9A /* ContentView.swift */; };
+		EDA349D22C107992009BEE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA349D12C107992009BEE9A /* Assets.xcassets */; };
+		EDA349D52C107992009BEE9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA349D42C107992009BEE9A /* Preview Assets.xcassets */; };
+		EDA349E02C119438009BEE9A /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349DF2C119438009BEE9A /* GameLogic.swift */; };
+		EDA349E22C119F0E009BEE9A /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E12C119F0E009BEE9A /* GameViewModel.swift */; };
+		EDA349E52C11A249009BEE9A /* AttemptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E42C11A249009BEE9A /* AttemptsView.swift */; };
+		EDA349E72C11A25D009BEE9A /* AttemptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */; };
+		EDA349E92C11AEAD009BEE9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E82C11AEAD009BEE9A /* Constants.swift */; };
+		EDA349EC2C11B188009BEE9A /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349EB2C11B188009BEE9A /* ScoreView.swift */; };
+		EDA349EE2C11B195009BEE9A /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */; };
+		EDA349F12C11B588009BEE9A /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F02C11B588009BEE9A /* CircleViewModel.swift */; };
+		EDA349F32C11B638009BEE9A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F22C11B638009BEE9A /* CircleView.swift */; };
+		EDA349F62C11D10C009BEE9A /* SelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F52C11D10C009BEE9A /* SelectionViewModel.swift */; };
+		EDA349F82C11D142009BEE9A /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F72C11D142009BEE9A /* SelectionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EDA349CA2C10798E009BEE9A /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA349CD2C10798E009BEE9A /* RockPaperScissorsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsApp.swift; sourceTree = "<group>"; };
+		EDA349CF2C10798E009BEE9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDA349D12C107992009BEE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDA349D42C107992009BEE9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDA349DF2C119438009BEE9A /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		EDA349E12C119F0E009BEE9A /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		EDA349E42C11A249009BEE9A /* AttemptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptsView.swift; sourceTree = "<group>"; };
+		EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptsViewModel.swift; sourceTree = "<group>"; };
+		EDA349E82C11AEAD009BEE9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EDA349EB2C11B188009BEE9A /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
+		EDA349F02C11B588009BEE9A /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
+		EDA349F22C11B638009BEE9A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		EDA349F52C11D10C009BEE9A /* SelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewModel.swift; sourceTree = "<group>"; };
+		EDA349F72C11D142009BEE9A /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDA349C72C10798E009BEE9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDA349C12C10798E009BEE9A = {
+			isa = PBXGroup;
+			children = (
+				EDA349CC2C10798E009BEE9A /* RockPaperScissors */,
+				EDA349CB2C10798E009BEE9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDA349CB2C10798E009BEE9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDA349CA2C10798E009BEE9A /* RockPaperScissors.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDA349CC2C10798E009BEE9A /* RockPaperScissors */ = {
+			isa = PBXGroup;
+			children = (
+				EDA349E82C11AEAD009BEE9A /* Constants.swift */,
+				EDA349CD2C10798E009BEE9A /* RockPaperScissorsApp.swift */,
+				EDA349DF2C119438009BEE9A /* GameLogic.swift */,
+				EDA349E12C119F0E009BEE9A /* GameViewModel.swift */,
+				EDA349CF2C10798E009BEE9A /* ContentView.swift */,
+				EDA349E32C11A230009BEE9A /* AttemptsView */,
+				EDA349EA2C11B169009BEE9A /* ScoreView */,
+				EDA349EF2C11B570009BEE9A /* CircleView */,
+				EDA349F42C11D0EB009BEE9A /* SelectionView */,
+				EDA349D12C107992009BEE9A /* Assets.xcassets */,
+				EDA349D32C107992009BEE9A /* Preview Content */,
+			);
+			path = RockPaperScissors;
+			sourceTree = "<group>";
+		};
+		EDA349D32C107992009BEE9A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EDA349D42C107992009BEE9A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDA349E32C11A230009BEE9A /* AttemptsView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA349E42C11A249009BEE9A /* AttemptsView.swift */,
+				EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */,
+			);
+			path = AttemptsView;
+			sourceTree = "<group>";
+		};
+		EDA349EA2C11B169009BEE9A /* ScoreView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA349EB2C11B188009BEE9A /* ScoreView.swift */,
+				EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */,
+			);
+			path = ScoreView;
+			sourceTree = "<group>";
+		};
+		EDA349EF2C11B570009BEE9A /* CircleView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA349F22C11B638009BEE9A /* CircleView.swift */,
+				EDA349F02C11B588009BEE9A /* CircleViewModel.swift */,
+			);
+			path = CircleView;
+			sourceTree = "<group>";
+		};
+		EDA349F42C11D0EB009BEE9A /* SelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA349F72C11D142009BEE9A /* SelectionView.swift */,
+				EDA349F52C11D10C009BEE9A /* SelectionViewModel.swift */,
+			);
+			path = SelectionView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDA349C92C10798E009BEE9A /* RockPaperScissors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDA349D82C107992009BEE9A /* Build configuration list for PBXNativeTarget "RockPaperScissors" */;
+			buildPhases = (
+				EDA349C62C10798E009BEE9A /* Sources */,
+				EDA349C72C10798E009BEE9A /* Frameworks */,
+				EDA349C82C10798E009BEE9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RockPaperScissors;
+			productName = RockPaperScissors;
+			productReference = EDA349CA2C10798E009BEE9A /* RockPaperScissors.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDA349C22C10798E009BEE9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					EDA349C92C10798E009BEE9A = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = EDA349C52C10798E009BEE9A /* Build configuration list for PBXProject "RockPaperScissors" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDA349C12C10798E009BEE9A;
+			productRefGroup = EDA349CB2C10798E009BEE9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDA349C92C10798E009BEE9A /* RockPaperScissors */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDA349C82C10798E009BEE9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA349D52C107992009BEE9A /* Preview Assets.xcassets in Resources */,
+				EDA349D22C107992009BEE9A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDA349C62C10798E009BEE9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA349E72C11A25D009BEE9A /* AttemptsViewModel.swift in Sources */,
+				EDA349F62C11D10C009BEE9A /* SelectionViewModel.swift in Sources */,
+				EDA349F82C11D142009BEE9A /* SelectionView.swift in Sources */,
+				EDA349EC2C11B188009BEE9A /* ScoreView.swift in Sources */,
+				EDA349E22C119F0E009BEE9A /* GameViewModel.swift in Sources */,
+				EDA349E52C11A249009BEE9A /* AttemptsView.swift in Sources */,
+				EDA349F12C11B588009BEE9A /* CircleViewModel.swift in Sources */,
+				EDA349E02C119438009BEE9A /* GameLogic.swift in Sources */,
+				EDA349F32C11B638009BEE9A /* CircleView.swift in Sources */,
+				EDA349E92C11AEAD009BEE9A /* Constants.swift in Sources */,
+				EDA349EE2C11B195009BEE9A /* ScoreViewModel.swift in Sources */,
+				EDA349D02C10798E009BEE9A /* ContentView.swift in Sources */,
+				EDA349CE2C10798E009BEE9A /* RockPaperScissorsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EDA349D62C107992009BEE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDA349D72C107992009BEE9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDA349D92C107992009BEE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RockPaperScissors/Preview Content\"";
+				DEVELOPMENT_TEAM = 4NWPMFBC59;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taarna.rockpaperscissors;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDA349DA2C107992009BEE9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RockPaperScissors/Preview Content\"";
+				DEVELOPMENT_TEAM = 4NWPMFBC59;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taarna.rockpaperscissors;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDA349C52C10798E009BEE9A /* Build configuration list for PBXProject "RockPaperScissors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA349D62C107992009BEE9A /* Debug */,
+				EDA349D72C107992009BEE9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDA349D82C107992009BEE9A /* Build configuration list for PBXNativeTarget "RockPaperScissors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA349D92C107992009BEE9A /* Debug */,
+				EDA349DA2C107992009BEE9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDA349C22C10798E009BEE9A /* Project object */;
+}
