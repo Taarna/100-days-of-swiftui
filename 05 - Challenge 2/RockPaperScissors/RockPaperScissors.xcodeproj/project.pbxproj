@@ -18,6 +18,8 @@
 		EDA349E92C11AEAD009BEE9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E82C11AEAD009BEE9A /* Constants.swift */; };
 		EDA349EC2C11B188009BEE9A /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349EB2C11B188009BEE9A /* ScoreView.swift */; };
 		EDA349EE2C11B195009BEE9A /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */; };
+		EDA349F12C11B588009BEE9A /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F02C11B588009BEE9A /* CircleViewModel.swift */; };
+		EDA349F32C11B638009BEE9A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F22C11B638009BEE9A /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		EDA349E82C11AEAD009BEE9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EDA349EB2C11B188009BEE9A /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
+		EDA349F02C11B588009BEE9A /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
+		EDA349F22C11B638009BEE9A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 				EDA349CF2C10798E009BEE9A /* ContentView.swift */,
 				EDA349E32C11A230009BEE9A /* AttemptsView */,
 				EDA349EA2C11B169009BEE9A /* ScoreView */,
+				EDA349EF2C11B570009BEE9A /* CircleView */,
 				EDA349D12C107992009BEE9A /* Assets.xcassets */,
 				EDA349D32C107992009BEE9A /* Preview Content */,
 			);
@@ -102,6 +107,15 @@
 				EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */,
 			);
 			path = ScoreView;
+			sourceTree = "<group>";
+		};
+		EDA349EF2C11B570009BEE9A /* CircleView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA349F22C11B638009BEE9A /* CircleView.swift */,
+				EDA349F02C11B588009BEE9A /* CircleViewModel.swift */,
+			);
+			path = CircleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +192,9 @@
 				EDA349EC2C11B188009BEE9A /* ScoreView.swift in Sources */,
 				EDA349E22C119F0E009BEE9A /* GameViewModel.swift in Sources */,
 				EDA349E52C11A249009BEE9A /* AttemptsView.swift in Sources */,
+				EDA349F12C11B588009BEE9A /* CircleViewModel.swift in Sources */,
 				EDA349E02C119438009BEE9A /* GameLogic.swift in Sources */,
+				EDA349F32C11B638009BEE9A /* CircleView.swift in Sources */,
 				EDA349E92C11AEAD009BEE9A /* Constants.swift in Sources */,
 				EDA349EE2C11B195009BEE9A /* ScoreViewModel.swift in Sources */,
 				EDA349D02C10798E009BEE9A /* ContentView.swift in Sources */,
