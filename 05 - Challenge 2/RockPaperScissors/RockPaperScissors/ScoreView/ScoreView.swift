@@ -10,6 +10,7 @@ struct ScoreView: View {
     var body: some View {
         VStack(alignment: .trailing) {
             Text("Score")
+                .fontWeight(.bold)
             Text("\(viewModel.score)")
         }
         .foregroundStyle(.accent)

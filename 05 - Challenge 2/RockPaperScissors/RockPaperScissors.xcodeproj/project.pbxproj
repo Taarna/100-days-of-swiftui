@@ -20,6 +20,8 @@
 		EDA349EE2C11B195009BEE9A /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */; };
 		EDA349F12C11B588009BEE9A /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F02C11B588009BEE9A /* CircleViewModel.swift */; };
 		EDA349F32C11B638009BEE9A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F22C11B638009BEE9A /* CircleView.swift */; };
+		EDA349F62C11D10C009BEE9A /* SelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F52C11D10C009BEE9A /* SelectionViewModel.swift */; };
+		EDA349F82C11D142009BEE9A /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F72C11D142009BEE9A /* SelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
 		EDA349F02C11B588009BEE9A /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
 		EDA349F22C11B638009BEE9A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		EDA349F52C11D10C009BEE9A /* SelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewModel.swift; sourceTree = "<group>"; };
+		EDA349F72C11D142009BEE9A /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 				EDA349E32C11A230009BEE9A /* AttemptsView */,
 				EDA349EA2C11B169009BEE9A /* ScoreView */,
 				EDA349EF2C11B570009BEE9A /* CircleView */,
+				EDA349F42C11D0EB009BEE9A /* SelectionView */,
 				EDA349D12C107992009BEE9A /* Assets.xcassets */,
 				EDA349D32C107992009BEE9A /* Preview Content */,
 			);
@@ -116,6 +121,15 @@
 				EDA349F02C11B588009BEE9A /* CircleViewModel.swift */,
 			);
 			path = CircleView;
+			sourceTree = "<group>";
+		};
+		EDA349F42C11D0EB009BEE9A /* SelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA349F72C11D142009BEE9A /* SelectionView.swift */,
+				EDA349F52C11D10C009BEE9A /* SelectionViewModel.swift */,
+			);
+			path = SelectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA349E72C11A25D009BEE9A /* AttemptsViewModel.swift in Sources */,
+				EDA349F62C11D10C009BEE9A /* SelectionViewModel.swift in Sources */,
+				EDA349F82C11D142009BEE9A /* SelectionView.swift in Sources */,
 				EDA349EC2C11B188009BEE9A /* ScoreView.swift in Sources */,
 				EDA349E22C119F0E009BEE9A /* GameViewModel.swift in Sources */,
 				EDA349E52C11A249009BEE9A /* AttemptsView.swift in Sources */,

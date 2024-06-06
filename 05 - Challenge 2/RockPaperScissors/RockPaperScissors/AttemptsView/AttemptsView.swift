@@ -11,9 +11,10 @@ struct AttemptsView: View {
         VStack(alignment: .leading, spacing: 5) {
             Text("Attempts left")
                 .foregroundStyle(.accent)
+                .fontWeight(.bold)
             HStack(spacing: 0) {
                 ForEach(0..<viewModel.maxAttempts, id: \.self) { index in
-                    index <= viewModel.remainingAttempts - 1 ? Heart(imageName: "heart.fill") : Heart(imageName: "heart")
+                    Heart(isFull: index <= viewModel.remainingAttempts - 1)
                 }
             }
         }
@@ -21,10 +22,12 @@ struct AttemptsView: View {
 }
 
 struct Heart: View {
-    var imageName: String
+    var isFull: Bool
     
     var body: some View {
-        Image(systemName: imageName).foregroundStyle(.accent)
+        
+        Image(systemName: isFull ? "heart.fill" : "heart")
+            .foregroundStyle(.accent)
     }
 }
 

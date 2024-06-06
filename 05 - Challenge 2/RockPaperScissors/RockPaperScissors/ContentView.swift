@@ -3,36 +3,28 @@ import SwiftUI
 struct ContentView: View {
     var viewModel: GameViewModel
     
-    @State private var currentChoice = Constants.possibleMoves.randomElement() ?? .rock
-    @State private var playerShouldWin: Bool = Bool.random()
-    @State private var score = 0
-    @State private var infoText = "That's correct! 🥳"
+    @State private var infoText = ""
     
     var body: some View {
         VStack {
             HStack {
-                AttemptsView(viewModel: AttemptsViewModel(remainingAttempts: 5, maxAttempts: 10))
+                AttemptsView(viewModel: viewModel.attemptsViewModel)
                 Spacer()
-                ScoreView(viewModel: ScoreViewModel(score: score))
+                ScoreView(viewModel: viewModel.scoreViewModel)
             }
             Spacer()
             Text(infoText)
                 .font(.largeTitle)
             Spacer()
-            CircleView(viewModel: CircleViewModel(size: 250, move: currentChoice))
+            CircleView(viewModel: viewModel.circleViewModel)
             Spacer()
             Spacer()
-            VStack {
-                HStack {
-                    ForEach(Constants.possibleMoves, id: \.self) { move in
-                        CircleView(viewModel: CircleViewModel(size: 100, move: move))
-                    }
-                }
-                Text("Pick an option")
-            }
+            SelectionView(viewModel: viewModel.selectionViewModel)
+            Spacer()
         }
         .padding()
         .background(Color.cinnabar.opacity(0.8))
+        .fontDesign(.monospaced)
     }
 }
 
