@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     var viewModel: GameViewModel
     
+    @State private var isAlertPresented = false
     @State private var infoText = ""
     
     var body: some View {
@@ -25,6 +26,12 @@ struct ContentView: View {
         .padding()
         .background(Color.cinnabar.opacity(0.8))
         .fontDesign(.monospaced)
+        .alert("Game finsihed", isPresented: $isAlertPresented) {
+            Button("Start a New Game", action: viewModel.startNewGame)
+        }
+        .onChange(of: viewModel.isGameFinished, initial: false) { _, newValue  in
+            isAlertPresented = newValue
+        }
     }
 }
 

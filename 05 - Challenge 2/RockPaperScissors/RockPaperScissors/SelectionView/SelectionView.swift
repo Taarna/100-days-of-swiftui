@@ -11,7 +11,11 @@ struct SelectionView: View {
         VStack(spacing: 20) {
             HStack {
                 ForEach(Constants.possibleMoves, id: \.self) { move in
-                    CircleView(viewModel: CircleViewModel(size: 100, move: move))
+                    Button{
+                        viewModel.onMoveSelected?(move)
+                    } label: {
+                        CircleView(viewModel: CircleViewModel(size: 100, move: move))
+                    }
                 }
             }
             Text("Pick a \(viewModel.expectedOutcome) option")

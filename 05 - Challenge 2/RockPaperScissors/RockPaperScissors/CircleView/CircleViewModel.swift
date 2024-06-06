@@ -3,7 +3,7 @@ import Foundation
 @Observable
 class CircleViewModel {
     private(set) var size: Double
-    private(set) var move: Move
+    var move: Move
     
     var emoji: String {
         switch(move) {

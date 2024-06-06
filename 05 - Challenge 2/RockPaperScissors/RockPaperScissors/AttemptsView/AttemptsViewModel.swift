@@ -2,7 +2,7 @@ import Foundation
 
 @Observable
 class AttemptsViewModel {
-    private(set) var remainingAttempts: Int
+    var remainingAttempts: Int
     private(set) var maxAttempts: Int
     
     init(remainingAttempts: Int, maxAttempts: Int) {

@@ -2,7 +2,9 @@ import Foundation
 
 @Observable
 class SelectionViewModel {
-    private(set) var expectedOutcome: String
+    var expectedOutcome: String
+    
+    var onMoveSelected: ((Move) -> Void)?
     
     init(expectedOutcome: String) {
         self.expectedOutcome = expectedOutcome
