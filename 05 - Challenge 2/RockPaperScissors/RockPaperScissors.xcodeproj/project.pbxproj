@@ -67,7 +67,6 @@
 		EDA349CC2C10798E009BEE9A /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
-				EDA349E82C11AEAD009BEE9A /* Constants.swift */,
 				EDA349CD2C10798E009BEE9A /* RockPaperScissorsApp.swift */,
 				EDA349DF2C119438009BEE9A /* GameLogic.swift */,
 				EDA349E12C119F0E009BEE9A /* GameViewModel.swift */,
@@ -126,6 +125,7 @@
 		EDABD8952C130AEB00761241 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				EDA349E82C11AEAD009BEE9A /* Constants.swift */,
 				EDABD8962C130B0B00761241 /* Utility.swift */,
 			);
 			path = Utility;
