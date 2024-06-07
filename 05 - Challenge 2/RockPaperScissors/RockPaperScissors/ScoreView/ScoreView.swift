@@ -1,17 +1,13 @@
 import SwiftUI
 
 struct ScoreView: View {
-    @State private var viewModel: ScoreViewModel
-    
-    init(viewModel: ScoreViewModel) {
-        self.viewModel = viewModel
-    }
+    var score: Int
     
     var body: some View {
         VStack(alignment: .trailing) {
             Text("Score")
                 .fontWeight(.bold)
-            Text("\(viewModel.score)")
+            Text("\(score)")
         }
         .foregroundStyle(.accent)
     }
@@ -19,5 +15,5 @@ struct ScoreView: View {
 }
 
 #Preview {
-    ScoreView(viewModel: ScoreViewModel(score: 50))
+    ScoreView(score: 50)
 }

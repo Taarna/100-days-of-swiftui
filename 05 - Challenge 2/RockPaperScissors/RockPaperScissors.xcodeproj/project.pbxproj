@@ -14,14 +14,11 @@
 		EDA349E02C119438009BEE9A /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349DF2C119438009BEE9A /* GameLogic.swift */; };
 		EDA349E22C119F0E009BEE9A /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E12C119F0E009BEE9A /* GameViewModel.swift */; };
 		EDA349E52C11A249009BEE9A /* AttemptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E42C11A249009BEE9A /* AttemptsView.swift */; };
-		EDA349E72C11A25D009BEE9A /* AttemptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */; };
 		EDA349E92C11AEAD009BEE9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349E82C11AEAD009BEE9A /* Constants.swift */; };
 		EDA349EC2C11B188009BEE9A /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349EB2C11B188009BEE9A /* ScoreView.swift */; };
-		EDA349EE2C11B195009BEE9A /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */; };
-		EDA349F12C11B588009BEE9A /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F02C11B588009BEE9A /* CircleViewModel.swift */; };
 		EDA349F32C11B638009BEE9A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F22C11B638009BEE9A /* CircleView.swift */; };
-		EDA349F62C11D10C009BEE9A /* SelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F52C11D10C009BEE9A /* SelectionViewModel.swift */; };
 		EDA349F82C11D142009BEE9A /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA349F72C11D142009BEE9A /* SelectionView.swift */; };
+		EDABD8972C130B0B00761241 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABD8962C130B0B00761241 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,14 +30,11 @@
 		EDA349DF2C119438009BEE9A /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		EDA349E12C119F0E009BEE9A /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		EDA349E42C11A249009BEE9A /* AttemptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptsView.swift; sourceTree = "<group>"; };
-		EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptsViewModel.swift; sourceTree = "<group>"; };
 		EDA349E82C11AEAD009BEE9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EDA349EB2C11B188009BEE9A /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
-		EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
-		EDA349F02C11B588009BEE9A /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
 		EDA349F22C11B638009BEE9A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		EDA349F52C11D10C009BEE9A /* SelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewModel.swift; sourceTree = "<group>"; };
 		EDA349F72C11D142009BEE9A /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		EDABD8962C130B0B00761241 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +76,7 @@
 				EDA349EA2C11B169009BEE9A /* ScoreView */,
 				EDA349EF2C11B570009BEE9A /* CircleView */,
 				EDA349F42C11D0EB009BEE9A /* SelectionView */,
+				EDABD8952C130AEB00761241 /* Utility */,
 				EDA349D12C107992009BEE9A /* Assets.xcassets */,
 				EDA349D32C107992009BEE9A /* Preview Content */,
 			);
@@ -100,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				EDA349E42C11A249009BEE9A /* AttemptsView.swift */,
-				EDA349E62C11A25D009BEE9A /* AttemptsViewModel.swift */,
 			);
 			path = AttemptsView;
 			sourceTree = "<group>";
@@ -109,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				EDA349EB2C11B188009BEE9A /* ScoreView.swift */,
-				EDA349ED2C11B195009BEE9A /* ScoreViewModel.swift */,
 			);
 			path = ScoreView;
 			sourceTree = "<group>";
@@ -118,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				EDA349F22C11B638009BEE9A /* CircleView.swift */,
-				EDA349F02C11B588009BEE9A /* CircleViewModel.swift */,
 			);
 			path = CircleView;
 			sourceTree = "<group>";
@@ -127,9 +119,16 @@
 			isa = PBXGroup;
 			children = (
 				EDA349F72C11D142009BEE9A /* SelectionView.swift */,
-				EDA349F52C11D10C009BEE9A /* SelectionViewModel.swift */,
 			);
 			path = SelectionView;
+			sourceTree = "<group>";
+		};
+		EDABD8952C130AEB00761241 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				EDABD8962C130B0B00761241 /* Utility.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,17 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA349E72C11A25D009BEE9A /* AttemptsViewModel.swift in Sources */,
-				EDA349F62C11D10C009BEE9A /* SelectionViewModel.swift in Sources */,
 				EDA349F82C11D142009BEE9A /* SelectionView.swift in Sources */,
 				EDA349EC2C11B188009BEE9A /* ScoreView.swift in Sources */,
+				EDABD8972C130B0B00761241 /* Utility.swift in Sources */,
 				EDA349E22C119F0E009BEE9A /* GameViewModel.swift in Sources */,
 				EDA349E52C11A249009BEE9A /* AttemptsView.swift in Sources */,
-				EDA349F12C11B588009BEE9A /* CircleViewModel.swift in Sources */,
 				EDA349E02C119438009BEE9A /* GameLogic.swift in Sources */,
 				EDA349F32C11B638009BEE9A /* CircleView.swift in Sources */,
 				EDA349E92C11AEAD009BEE9A /* Constants.swift in Sources */,
-				EDA349EE2C11B195009BEE9A /* ScoreViewModel.swift in Sources */,
 				EDA349D02C10798E009BEE9A /* ContentView.swift in Sources */,
 				EDA349CE2C10798E009BEE9A /* RockPaperScissorsApp.swift in Sources */,
 			);

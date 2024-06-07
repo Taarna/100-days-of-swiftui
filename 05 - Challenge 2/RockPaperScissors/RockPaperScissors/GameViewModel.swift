@@ -2,54 +2,55 @@ import SwiftUI
 
 @Observable
 class GameViewModel {
-    private var model = GameLogic()
-    
-    var attemptsViewModel: AttemptsViewModel
-    var scoreViewModel: ScoreViewModel
-    var circleViewModel: CircleViewModel
-    var selectionViewModel: SelectionViewModel
-    
-    var isGameFinished: Bool
+    private var model: GameLogic
     
     init() {
-        let tempModel = GameLogic()
+        self.model = GameLogic()
+    }
+    
+    ///
+    
+    func getMaxAttempts() -> Int {
+        return model.maxAttempts
+    }
+    
+    func getRemainingAttempts() -> Int {
+        return model.remainingAttempts
+    }
+    
+    func getScore() -> Int {
+        return model.score
+    }
+    
+    func getCurrentMoveEmoji() -> String {
+        let currentMove = getCurrentMove()
+        let emoji = getEmojiForMove(currentMove)
         
-        self.model = tempModel
-        
-        self.attemptsViewModel = AttemptsViewModel(remainingAttempts: Constants.maxAttempts, maxAttempts: Constants.maxAttempts)
-        self.scoreViewModel = ScoreViewModel(score: 0)
-        self.circleViewModel = CircleViewModel(size: 250, move: tempModel.currentMove)
-        self.selectionViewModel = SelectionViewModel(expectedOutcome: tempModel.getExpectedOutcome())
-        
-        isGameFinished = tempModel.isGameFinished
-        
-        self.selectionViewModel.onMoveSelected = { [weak self] move in
-            self?.handleMoveSelection(move)
-        }
+        return emoji
     }
     
     func getExpectedOutcome() -> String {
-        return model.getExpectedOutcome()
+        let playerShouldWin = model.playerShouldWin
+        return playerShouldWin ? "winning" : "losing"
+    }
+    
+    func getIsGameFinished() -> Bool {
+        return model.isGameFinished
+    }
+    
+    ///
+    
+    func playerSelected(move: Move) {
+        model.playerSelected(move: move)
     }
     
     func startNewGame() {
         model.startNewGame()
-        
-        refreshValues()
     }
     
-    private func handleMoveSelection(_ move: Move) {
-        model.playerSelected(move: move)
-        
-        refreshValues()
-    }
+    ///
     
-    private func refreshValues() {
-        attemptsViewModel.remainingAttempts = model.remainingAttempts
-        scoreViewModel.score = model.score
-        circleViewModel.move = model.currentMove
-        selectionViewModel.expectedOutcome = model.getExpectedOutcome()
-        
-        isGameFinished = model.isGameFinished
+    private func getCurrentMove() -> Move {
+        return model.currentMove
     }
 }

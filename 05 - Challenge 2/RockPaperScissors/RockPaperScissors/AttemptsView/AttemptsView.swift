@@ -1,11 +1,8 @@
 import SwiftUI
 
 struct AttemptsView: View {
-    @State private var viewModel: AttemptsViewModel
-    
-    init(viewModel: AttemptsViewModel) {
-        self.viewModel = viewModel
-    }
+    var remainingAttempts: Int
+    var maxAttempts: Int
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -13,8 +10,8 @@ struct AttemptsView: View {
                 .foregroundStyle(.accent)
                 .fontWeight(.bold)
             HStack(spacing: 0) {
-                ForEach(0..<viewModel.maxAttempts, id: \.self) { index in
-                    Heart(isFull: index <= viewModel.remainingAttempts - 1)
+                ForEach(0..<maxAttempts, id: \.self) { index in
+                    Heart(isFull: index <= remainingAttempts - 1)
                 }
             }
         }
@@ -32,5 +29,5 @@ struct Heart: View {
 }
 
 #Preview {
-    AttemptsView(viewModel: AttemptsViewModel(remainingAttempts: 6, maxAttempts: 10))
+    AttemptsView(remainingAttempts: 8, maxAttempts: 10)
 }

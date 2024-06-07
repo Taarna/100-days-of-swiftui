@@ -12,6 +12,7 @@ class GameLogic {
     private(set) var score: Int
     private(set) var currentMove: Move
     private(set) var remainingAttempts: Int
+    private(set) var maxAttempts = Constants.maxAttempts
     private(set) var isGameFinished = false
     
     init() {
@@ -22,13 +23,8 @@ class GameLogic {
         isGameFinished = false
     }
     
-    func getExpectedOutcome() -> String {
-        return playerShouldWin ? "winning" : "losing"
-    }
-    
     func playerSelected(move: Move){
         let isMoveWinning = isMoveWinning(move: move)
-        
         let isAnswerCorrect = isMoveWinning && playerShouldWin || !isMoveWinning && !playerShouldWin
         
         if isAnswerCorrect {
