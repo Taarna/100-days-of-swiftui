@@ -1,24 +1,21 @@
 import SwiftUI
 
 struct SelectionView: View {
-    @State private var viewModel: SelectionViewModel
-    
-    init(viewModel: SelectionViewModel) {
-        self.viewModel = viewModel
-    }
+    var expectedOutcome: String
+    var moveSelected: ((Move) -> ())?
     
     var body: some View {
         VStack(spacing: 20) {
             HStack {
                 ForEach(Constants.possibleMoves, id: \.self) { move in
                     Button{
-                        viewModel.onMoveSelected?(move)
+                        moveSelected?(move)
                     } label: {
-                        CircleView(viewModel: CircleViewModel(size: 100, move: move))
+                        CircleView(size: 100, emoji: getEmojiForMove(move))
                     }
                 }
             }
-            Text("Pick a \(viewModel.expectedOutcome) option")
+            Text("Pick a \(expectedOutcome) option")
                 .font(.title2)
                 .fontWeight(.bold)
                 .foregroundStyle(.accent)
@@ -27,5 +24,5 @@ struct SelectionView: View {
 }
 
 #Preview {
-    SelectionView(viewModel: SelectionViewModel(expectedOutcome: "winning")).fontDesign(.monospaced)
+    SelectionView(expectedOutcome: "winning").fontDesign(.monospaced)
 }

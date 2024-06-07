@@ -1,17 +1,14 @@
 import SwiftUI
 
 struct CircleView: View {
-    @State private var viewModel: CircleViewModel
-    
-    init(viewModel: CircleViewModel) {
-        self.viewModel = viewModel
-    }
+    var size: Double
+    var emoji: String
     
     var body: some View {
-        Text(viewModel.emoji)
-            .font(.system(size: viewModel.size / 2))
-            .frame(width: viewModel.size, height: viewModel.size)
-            .background(Background(size: viewModel.size))
+        Text(emoji)
+            .font(.system(size: size / 2))
+            .frame(width: size, height: size)
+            .background(Background(size: size))
     }
 }
 
@@ -25,10 +22,16 @@ private struct Background: View {
     }
     
     var body: some View {
-        Circle().fill(RadialGradient(colors: [.accent, .cinnabar], center: .center, startRadius: 0, endRadius: size))
+        Circle().fill(
+            RadialGradient(
+                colors: [.accent, .cinnabar], center: .center, 
+                startRadius: 0,
+                endRadius: size
+            )
+        )
     }
 }
 
 #Preview {
-    CircleView(viewModel: CircleViewModel(size: 350, move: .rock))
+    CircleView(size: 350, emoji: "😃")
 }
