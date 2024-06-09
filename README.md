@@ -2,19 +2,19 @@ I've skipped days 1-15 and started with [Day 16](https://www.hackingwithswift.co
 
 **Days 16 - 18**
 
-Project 1 - WeSplit
+[Project 1 - WeSplit](https://github.com/Taarna/100-days-of-swiftui/tree/main/01%20-%20Project%201/WeSplit)
 
 **Day 19**
 
-Challenge 1 - Unit converter
+[Challenge 1 - Unit converter](https://github.com/Taarna/100-days-of-swiftui/tree/main/02%20-%20Challenge%201)
 
 **Days 20 - 22**
 
-Prokect 2 - Guess the Flag
+  [Project 2 - Guess the Flag(https://github.com/Taarna/100-days-of-swiftui/tree/main/03%20-%20Project%202/GuessTheFlag)
 
 **Days 23 - 24**
 
-Project 3 - Views and Modifiers
+[Project 3 - Views and Modifiers](https://github.com/Taarna/100-days-of-swiftui/tree/main/04%20-%20Project%203)
 
 **Day 25**
 
