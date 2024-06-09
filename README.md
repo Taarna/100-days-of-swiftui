@@ -10,7 +10,7 @@ I've skipped days 1-15 and started with [Day 16](https://www.hackingwithswift.co
 
 **Days 20 - 22**
 
-  [Project 2 - Guess the Flag(https://github.com/Taarna/100-days-of-swiftui/tree/main/03%20-%20Project%202/GuessTheFlag)
+[Project 2 - Guess the Flag](https://github.com/Taarna/100-days-of-swiftui/tree/main/03%20-%20Project%202/GuessTheFlag)
 
 **Days 23 - 24**
 
