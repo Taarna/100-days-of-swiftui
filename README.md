@@ -8,10 +8,18 @@ Project 1 - WeSplit
 
 Challenge 1 - Unit converter
 
+**Days 20 - 22**
+
+Prokect 2 - Guess the Flag
+
+**Days 23 - 24**
+
+Project 3 - Views and Modifiers
+
 **Day 25**
 
 [Challenge 2 - Rock, paper, scissors](https://github.com/Taarna/100-days-of-swiftui/tree/main/05%20-%20Challenge%202/RockPaperScissors)
 
-**Day 26**
+**Days 26 - 28**
 
 Project 4 - BetterRest
