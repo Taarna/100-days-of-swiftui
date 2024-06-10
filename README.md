@@ -22,4 +22,8 @@ I've skipped days 1-15 and started with [Day 16](https://www.hackingwithswift.co
 
 **Days 26 - 28**
 
-Project 4 - BetterRest
+[Project 4 - BetterRest](https://github.com/Taarna/100-days-of-swiftui/tree/main/06%20-%20Project%204/BetterRest)
+
+**Days 29 - 31**
+
+Project 5 - Word Scramble
