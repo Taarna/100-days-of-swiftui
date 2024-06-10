@@ -6,54 +6,9 @@ struct ContentView: View {
     @State private var sleepAmount = 8.0
     @State private var coffeeAmount = 1
     
-    @State private var alertTitle = ""
-    @State private var alertMessage = ""
-    @State private var showingAlert = false
-    
-    static var defaultWakeTime: Date {
-        var components = DateComponents()
-        components.hour = 7
-        components.minute = 0
-        return Calendar.current.date(from: components) ?? .now
-    }
-    
-    var body: some View {
-        NavigationStack {
-            Form {
-                VStack(alignment: .leading) {
-                    Text("When do you want to wake up?")
-                        .font(.headline)
-                    
-                    DatePicker("Please enter a time", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
-                        .labelsHidden()
-                }
-                VStack(alignment: .leading) {
-                    Text("Desired amount of sleep")
-                        .font(.headline)
-                    
-                    Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
-                }
-                VStack(alignment: .leading) {
-                    Text("Daily coffee intake")
-                        .font(.headline)
-                    
-                    Stepper("^[\(coffeeAmount) cup](inflect: true)", value: $coffeeAmount, in: 1...20)
-                }
-                Spacer()
-            }
-            .navigationTitle("Better Rest")
-            .toolbar {
-                Button("Calculate", action: calculateBedtime)
-            }
-            .alert(alertTitle, isPresented: $showingAlert) {
-                Button("OK") { }
-            } message: {
-                Text(alertMessage)
-            }
-        }
-    }
-    
-    func calculateBedtime() {
+    private var recommendedSleepTime: String {
+        var returnMessage = ""
+        
         do {
             let config = MLModelConfiguration()
             let model = try SleepCalculator(configuration: config)
@@ -66,15 +21,55 @@ struct ContentView: View {
             
             let sleepTime = wakeUpTime - prediction.actualSleep
             
-            alertTitle = "Your ideal bedtime is…"
-            alertMessage = sleepTime.formatted(date: .omitted, time: .shortened)
+            returnMessage = sleepTime.formatted(date: .omitted, time: .shortened)
             
         } catch {
-            alertTitle = "Error"
-            alertMessage = "Sorry, there was a problem calculating your bedtime."
+            returnMessage = "Error calculating sleep time"
         }
         
-        showingAlert = true
+        return returnMessage
+    }
+    
+    static var defaultWakeTime: Date {
+        var components = DateComponents()
+        components.hour = 7
+        components.minute = 0
+        return Calendar.current.date(from: components) ?? .now
+    }
+    
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section("When do you want to wake up?") {
+                    DatePicker("Please enter a time", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
+                    .labelsHidden()
+                }
+                .font(.callout)
+                
+                Section("Desired amount of sleep") {
+                    Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                }
+                .font(.callout)
+                
+                Section("Daily coffeee intake") {
+                    Picker("Daily coffeee intake", selection: $coffeeAmount) {
+                        ForEach(1..<11) { numberOfCups in
+                            Text("^[\(numberOfCups) cup](inflect: true)")
+                        }
+                    }
+                    .labelsHidden()
+                }
+                .font(.callout)
+                
+                Section("Recommended bedtime") {
+                    Text("\(recommendedSleepTime)")
+                }
+                .font(.callout)
+            }
+            .navigationTitle("BetterRest")
+        }
+        .fontDesign(.serif)
+        
     }
 }
 
