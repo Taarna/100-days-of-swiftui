@@ -4,6 +4,7 @@ struct ContentView: View {
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
+    @State private var score = 0
     
     @State private var errorTitle = ""
     @State private var errorMessage = ""
@@ -12,6 +13,10 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
+                Section {
+                    Text("Your score: \(score)")
+                }
+                
                 Section {
                     TextField("Enter your word", text: $newWord)
                         .textInputAutocapitalization(.never)
@@ -27,6 +32,11 @@ struct ContentView: View {
                 }
             }
             .navigationTitle(rootWord)
+            .toolbar() {
+                Button("New Game") {
+                    startGame()
+                }
+            }
             .onSubmit(addNewWord)
         }
         .onAppear(perform: startGame)
@@ -40,7 +50,15 @@ struct ContentView: View {
             .lowercased()
             .trimmingCharacters(in: .whitespacesAndNewlines)
         
-        guard answer.count > 0 else { return }
+        guard answer.count > 2 else {
+            wordError(title: "Word too short", message: "Words should have at least 3 characters")
+            return
+        }
+        
+        guard answer != rootWord else {
+            wordError(title: "Wrong!", message: "You can't use the start word")
+            return
+        }
         
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
@@ -61,6 +79,8 @@ struct ContentView: View {
             usedWords.insert(answer, at: 0)
         }
         
+        score += answer.count
+        
         newWord = ""
     }
     
@@ -74,6 +94,10 @@ struct ContentView: View {
         
         let allWords = startWords.components(separatedBy: .newlines)
         rootWord = allWords.randomElement() ?? "silkworm"
+        
+        score = 0
+        usedWords.removeAll()
+        newWord = ""
     }
     
     private func isOriginal(word: String) -> Bool {
