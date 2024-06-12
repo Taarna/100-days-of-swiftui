@@ -11,35 +11,63 @@ struct ContentView: View {
     @State private var showingError = false
     
     var body: some View {
-        NavigationStack {
-            List {
-                Section {
-                    Text("Your score: \(score)")
-                }
+        VStack {
+            Text("Word Scramble")
+                .font(.title)
+                .fontWeight(.bold)
+            
+            Spacer()
+                .frame(height: 16)
+            
+            Text("Your score: \(score) points")
+                .listRowBackground(Color.shakespeare)
+            
+            Spacer()
+                .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+            
+            Text("\(rootWord)")
+                .background(
+                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
+                        .fill(.thinMaterial)
+                        .frame(width: 250, height: 100)
+                )
+                .font(.largeTitle)
+            
+            
+            Spacer()
+                .frame(height: 100)
+            
+            ZStack(alignment: .center) {
+                RoundedRectangle(cornerRadius: 15.0, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
+                    .fill(.thinMaterial)
+                    .frame(width: 250, height: 50)
                 
-                Section {
-                    TextField("Enter your word", text: $newWord)
-                        .textInputAutocapitalization(.never)
-                }
-                
-                Section {
-                    ForEach(usedWords, id: \.self) { usedWord in
-                        HStack {
-                            Image(systemName: "\(usedWord.count).circle")
-                            Text(usedWord)
-                        }
+                TextField("Enter your word", text: $newWord)
+                    .padding()
+                    .frame(width: 230, height: 40)
+                    .background(Color.clear)
+                    .multilineTextAlignment(.center)
+            }
+            .padding(.horizontal)
+            
+            Spacer()
+                .frame(height: 20)
+            
+            ScrollView {
+                ForEach(usedWords, id: \.self) { usedWord in
+                    HStack(alignment: .center) {
+                        Image(systemName: "\(usedWord.count).circle")
+                        Text(usedWord)
                     }
+                    .padding(5)
                 }
             }
-            .navigationTitle(rootWord)
-            .toolbar() {
-                Button("New Game") {
-                    startGame()
-                }
-            }
-            .onSubmit(addNewWord)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.shakespeare)
+        .fontDesign(.monospaced)
         .onAppear(perform: startGame)
+        .onSubmit(addNewWord)
         .alert(errorTitle, isPresented: $showingError) { } message: {
             Text(errorMessage)
         }
@@ -64,12 +92,12 @@ struct ContentView: View {
             wordError(title: "Word used already", message: "Be more original")
             return
         }
-
+        
         guard isPossible(word: answer) else {
             wordError(title: "Word not possible", message: "You can't spell that word from '\(rootWord)'!")
             return
         }
-
+        
         guard isReal(word: answer) else {
             wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
             return
