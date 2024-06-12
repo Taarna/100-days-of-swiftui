@@ -27,3 +27,7 @@ I've skipped days 1-15 and started with [Day 16](https://www.hackingwithswift.co
 **Days 29 - 31**
 
 Project 5 - Word Scramble
+
+**Days 32 - 34**
+
+Project 6 - Animations
