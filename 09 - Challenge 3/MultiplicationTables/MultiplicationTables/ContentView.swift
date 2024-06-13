@@ -6,11 +6,14 @@ struct ContentView: View {
     var body: some View {
         if !viewModel.isGameActive() {
             Section("Which table do you want to practice?") {
+                Text("Font test")
+                    .font(Font.pixelify(.regular, size: 26.0))
                 HStack {
                     Button("-") {
                         viewModel.decreaseTableNumber()
                     }
                     Text("\(viewModel.getSelectedTable())")
+                        .font(Font.custom("PixelifySans", size: 18))
                     Button("+") {
                         viewModel.increaseTableNumber()
                     }
