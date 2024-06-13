@@ -7,6 +7,8 @@ class GameLogic {
     
     private(set) var questions: Array<Int> = []
     
+    private(set) var isGameActive = false
+    
     let possibleNumberOfQuestions = [5, 10, 15]
     
     ///
@@ -14,6 +16,7 @@ class GameLogic {
     func startNewGame() {
         questions.removeAll()
         generateQuestions()
+        isGameActive = true
     }
     
     func increaseTableNumber() {

@@ -28,6 +28,10 @@ class GameViewModel {
         return model.possibleNumberOfQuestions
     }
     
+    func isGameActive() -> Bool {
+        return model.isGameActive
+    }
+    
     ///
     
     func startNewGame() {
