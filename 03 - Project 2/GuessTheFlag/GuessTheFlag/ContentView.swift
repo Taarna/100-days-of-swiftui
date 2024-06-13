@@ -15,6 +15,11 @@ struct ContentView: View {
     @State var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"].shuffled()
     @State var correctAnswer = Int.random(in: 0...2)
     
+    @State private var animationRotation = 0.0
+    @State private var selectedIndex = -1
+    @State private var buttonOpacity = 1.0
+    @State private var scaleFactor = 1.0
+    
     var body: some View {
         ZStack {
             RadialGradient(stops: [
@@ -39,9 +44,17 @@ struct ContentView: View {
                     ForEach(0..<3) { number in
                         Button {
                             flagTapped(number)
+                            withAnimation {
+                                animationRotation += 360
+                                buttonOpacity = 0.25
+                                scaleFactor = 0.8
+                            }
                         } label: {
                             FlagView(flagImage: countries[number])
                         }
+                        .rotation3DEffect(.degrees(selectedIndex == number ? animationRotation : 0), axis: (x: 0, y: 1, z: 0))
+                        .opacity(selectedIndex == number ? 1.0 : buttonOpacity)
+                        .scaleEffect(selectedIndex == number ? 1.0 : scaleFactor)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -85,6 +98,8 @@ struct ContentView: View {
             scoreTitle = "Wrong! That’s the flag of \(selectedCountry)"
         }
         
+        selectedIndex = number
+        
         showingScore = true
     }
     
@@ -105,6 +120,10 @@ struct ContentView: View {
         if (numberOfTries == 0) {
             showingGameFinished = true
         }
+        
+        selectedIndex = -1
+        buttonOpacity = 1.0
+        scaleFactor = 1.0
     }
     
     private func resetGame() {
