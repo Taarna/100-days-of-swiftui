@@ -4,7 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>PixelifySans.ttf</string>
+		<string>arcadeclassic.regular.ttf</string>
+		<string>exepixelperfect.medium.ttf</string>
 	</array>
 </dict>
 </plist>

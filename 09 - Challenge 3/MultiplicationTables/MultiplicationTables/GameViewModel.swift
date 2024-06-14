@@ -46,4 +46,7 @@ class GameViewModel {
         model.increaseTableNumber()
     }
     
+    func selectedQuestionNumber(at index: Int) {
+        model.selectedQuestionNumber(at: index)
+    }
 }

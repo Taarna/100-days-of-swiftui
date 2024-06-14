@@ -2,7 +2,7 @@ import Foundation
 
 @Observable
 class GameLogic {
-    var numberOfQuestions = 10
+    var numberOfQuestions = 0
     private(set) var selectedTable = 2
     
     private(set) var questions: Array<Int> = []
@@ -29,6 +29,10 @@ class GameLogic {
         if (selectedTable > 2) {
             selectedTable -= 1
         }
+    }
+    
+    func selectedQuestionNumber(at index: Int) {
+        self.numberOfQuestions = possibleNumberOfQuestions[index]
     }
     
     ///

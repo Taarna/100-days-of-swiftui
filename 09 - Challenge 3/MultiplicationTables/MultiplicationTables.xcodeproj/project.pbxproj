@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED9893FB2C1B8E5E0081E745 /* Font+Pixelify.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9893FA2C1B8E5E0081E745 /* Font+Pixelify.swift */; };
+		ED9893FB2C1B8E5E0081E745 /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9893FA2C1B8E5E0081E745 /* Font+Custom.swift */; };
+		ED9893FE2C1B9FD70081E745 /* QuestionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9893FD2C1B9FD70081E745 /* QuestionsButton.swift */; };
+		ED9894062C1BA7430081E745 /* arcadeclassic.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED9894052C1BA7430081E745 /* arcadeclassic.regular.ttf */; };
+		ED9894082C1BA96B0081E745 /* exepixelperfect.medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED9894072C1BA96B0081E745 /* exepixelperfect.medium.ttf */; };
 		ED9BC4212C1AF46F00576DF0 /* MultiplicationTablesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BC4202C1AF46F00576DF0 /* MultiplicationTablesApp.swift */; };
 		ED9BC4232C1AF46F00576DF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BC4222C1AF46F00576DF0 /* ContentView.swift */; };
 		ED9BC4252C1AF47300576DF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED9BC4242C1AF47300576DF0 /* Assets.xcassets */; };
 		ED9BC4282C1AF47300576DF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED9BC4272C1AF47300576DF0 /* Preview Assets.xcassets */; };
 		ED9BC42F2C1B1D3400576DF0 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BC42E2C1B1D3400576DF0 /* GameLogic.swift */; };
 		ED9BC4312C1B1DA300576DF0 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BC4302C1B1DA300576DF0 /* GameViewModel.swift */; };
-		ED9BC4362C1B2E2600576DF0 /* PixelifySans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED9BC4352C1B2E2600576DF0 /* PixelifySans.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ED9893FA2C1B8E5E0081E745 /* Font+Pixelify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Pixelify.swift"; sourceTree = "<group>"; };
+		ED9893FA2C1B8E5E0081E745 /* Font+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Custom.swift"; sourceTree = "<group>"; };
+		ED9893FD2C1B9FD70081E745 /* QuestionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsButton.swift; sourceTree = "<group>"; };
+		ED9894052C1BA7430081E745 /* arcadeclassic.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arcadeclassic.regular.ttf; sourceTree = "<group>"; };
+		ED9894072C1BA96B0081E745 /* exepixelperfect.medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = exepixelperfect.medium.ttf; sourceTree = "<group>"; };
 		ED9BC41D2C1AF46F00576DF0 /* MultiplicationTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiplicationTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9BC4202C1AF46F00576DF0 /* MultiplicationTablesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationTablesApp.swift; sourceTree = "<group>"; };
 		ED9BC4222C1AF46F00576DF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,7 +32,6 @@
 		ED9BC42E2C1B1D3400576DF0 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		ED9BC4302C1B1DA300576DF0 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		ED9BC4342C1B2D3200576DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		ED9BC4352C1B2E2600576DF0 /* PixelifySans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PixelifySans.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +48,17 @@
 		ED9893F92C1B8DFA0081E745 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				ED9893FA2C1B8E5E0081E745 /* Font+Pixelify.swift */,
+				ED9893FA2C1B8E5E0081E745 /* Font+Custom.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		ED9893FC2C1B9FA50081E745 /* QuestionsButton */ = {
+			isa = PBXGroup;
+			children = (
+				ED9893FD2C1B9FD70081E745 /* QuestionsButton.swift */,
+			);
+			path = QuestionsButton;
 			sourceTree = "<group>";
 		};
 		ED9BC4142C1AF46F00576DF0 = {
@@ -68,9 +80,10 @@
 		ED9BC41F2C1AF46F00576DF0 /* MultiplicationTables */ = {
 			isa = PBXGroup;
 			children = (
-				ED9893F92C1B8DFA0081E745 /* Utility */,
 				ED9BC4342C1B2D3200576DF0 /* Info.plist */,
 				ED9BC4322C1B2CF800576DF0 /* Resources */,
+				ED9893F92C1B8DFA0081E745 /* Utility */,
+				ED9893FC2C1B9FA50081E745 /* QuestionsButton */,
 				ED9BC4202C1AF46F00576DF0 /* MultiplicationTablesApp.swift */,
 				ED9BC42E2C1B1D3400576DF0 /* GameLogic.swift */,
 				ED9BC4302C1B1DA300576DF0 /* GameViewModel.swift */,
@@ -92,7 +105,8 @@
 		ED9BC4322C1B2CF800576DF0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ED9BC4352C1B2E2600576DF0 /* PixelifySans.ttf */,
+				ED9894052C1BA7430081E745 /* arcadeclassic.regular.ttf */,
+				ED9894072C1BA96B0081E745 /* exepixelperfect.medium.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -155,9 +169,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED9BC4362C1B2E2600576DF0 /* PixelifySans.ttf in Resources */,
 				ED9BC4282C1AF47300576DF0 /* Preview Assets.xcassets in Resources */,
 				ED9BC4252C1AF47300576DF0 /* Assets.xcassets in Resources */,
+				ED9894082C1BA96B0081E745 /* exepixelperfect.medium.ttf in Resources */,
+				ED9894062C1BA7430081E745 /* arcadeclassic.regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,8 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED9BC4312C1B1DA300576DF0 /* GameViewModel.swift in Sources */,
-				ED9893FB2C1B8E5E0081E745 /* Font+Pixelify.swift in Sources */,
+				ED9893FB2C1B8E5E0081E745 /* Font+Custom.swift in Sources */,
 				ED9BC42F2C1B1D3400576DF0 /* GameLogic.swift in Sources */,
+				ED9893FE2C1B9FD70081E745 /* QuestionsButton.swift in Sources */,
 				ED9BC4232C1AF46F00576DF0 /* ContentView.swift in Sources */,
 				ED9BC4212C1AF46F00576DF0 /* MultiplicationTablesApp.swift in Sources */,
 			);

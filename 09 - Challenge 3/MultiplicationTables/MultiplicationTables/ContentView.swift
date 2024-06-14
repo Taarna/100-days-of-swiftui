@@ -5,39 +5,85 @@ struct ContentView: View {
     
     var body: some View {
         if !viewModel.isGameActive() {
-            Section("Which table do you want to practice?") {
-                Text("Font test")
-                    .font(Font.pixelify(.regular, size: 26.0))
-                HStack {
-                    Button("-") {
-                        viewModel.decreaseTableNumber()
+            ZStack {
+                Color.blue.ignoresSafeArea()
+                
+                VStack {
+                    Section("Which table do you want to practice?") {
+                        HStack {
+                            Button(action: {
+                                viewModel.decreaseTableNumber()
+                            }, label: {
+                                Text("-")
+                                    .font(Font.pixel(.regular, size: 36.0))
+                                    .tint(Color.black)
+                            })
+                            .padding(EdgeInsets(top: 0, leading: 7, bottom: 0, trailing: 7))
+                            
+                            Text("\(viewModel.getSelectedTable())")
+                                .font(Font.arcade(.regular, size: 30.0))
+                            
+                            Button(action: {
+                                viewModel.increaseTableNumber()
+                            }, label: {
+                                Text("+")
+                                    .font(Font.pixel(.regular, size: 36.0))
+                                    .tint(Color.black)
+                            })
+                            .padding(EdgeInsets(top: 0, leading: 7, bottom: 0, trailing: 7))
+                        }
                     }
-                    Text("\(viewModel.getSelectedTable())")
-                        .font(Font.custom("PixelifySans", size: 18))
-                    Button("+") {
-                        viewModel.increaseTableNumber()
+                    .font(Font.pixel(.regular, size: 30.0))
+                    .multilineTextAlignment(.center)
+                    .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
+                    
+                    Spacer()
+                        .frame(height: 30)
+                    
+                    Section("How many questions?") {
+                        HStack {
+                            ForEach(0..<viewModel.getPossibleQuestions().count, id: \.self) { questionIndex in
+                                Button(action: {
+                                    let questionNumber = viewModel.getPossibleQuestions()[questionIndex]
+                                    viewModel.setNumberOfQuestions(questionNumber)
+                                }) {
+                                    Text("\(viewModel.getPossibleQuestions()[questionIndex])")
+                                }
+                                .buttonStyle(QuestionsButton(isSelected: viewModel.getNumberOfQuestions() == viewModel.getPossibleQuestions()[questionIndex]))
+                            }
+                        }
                     }
+                    .font(Font.pixel(.regular, size: 30.0))
+                    .multilineTextAlignment(.center)
+                    .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
+                    
+                    Spacer()
+                        .frame(height: 50)
+                    
+                    Button("Start Game") {
+                        withAnimation(.smooth) {
+                            viewModel.startNewGame()
+                        }
+                    }
+                    .font(Font.pixel(.regular, size: 30.0))
+                    .foregroundColor(.black)
+                    .padding()
+                    .background(Color.clear)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 3)
+                    )
+                    .padding()
                 }
+                .background(
+                    RoundedRectangle(cornerRadius: 15)
+                        .fill(Color.yellow)
+                        .shadow(radius: 10)
+                )
+                .padding()
             }
             
-            Section("How many questions?") {
-                Picker("How many questions?", selection: Binding(
-                    get: { viewModel.getNumberOfQuestions() },
-                    set: { viewModel.setNumberOfQuestions($0)})
-                ){
-                    ForEach(0..<viewModel.getPossibleQuestions().count, id: \.self) { index in
-                        Text("\(viewModel.getPossibleQuestions()[index])").tag(viewModel.getPossibleQuestions()[index])
-                    }
-                }
-                .labelsHidden()
-                .pickerStyle(.segmented)
-            }
-            
-            Button("Start Game") {
-                withAnimation(.smooth) {
-                    viewModel.startNewGame()
-                }
-            }
         } else {
             HStack {
                 VStack {
