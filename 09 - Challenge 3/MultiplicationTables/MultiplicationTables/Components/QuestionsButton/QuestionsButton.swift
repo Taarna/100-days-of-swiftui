@@ -21,17 +21,11 @@ struct QuestionsButton : ButtonStyle {
 #Preview {
     VStack {
         HStack {
-            Button("5") {
-                
-            }
+            Button("5") {}
             .buttonStyle(QuestionsButton(isSelected: true))
-            Button("10") {
-                
-            }
+            Button("10") {}
             .buttonStyle(QuestionsButton(isSelected: false))
-            Button("15") {
-                
-            }
+            Button("15") {}
             .buttonStyle(QuestionsButton(isSelected: false))
         }
     }

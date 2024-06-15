@@ -1,23 +1,15 @@
-//
-
 import SwiftUI
 
 @main
 struct MultiplicationTablesApp: App {
-    @State var gameViewModel = GameViewModel()
-    
-    init() {
-        for family in UIFont.familyNames {
-            print("Family: \(family)")
-            for name in UIFont.fontNames(forFamilyName: family) {
-                print("   - \(name)")
-            }
-        }
-    }
+    let initialSettings = GameSettings(
+        numberOfQuestions: Defaults.defaultNumberOfQuestions,
+        multiplicationTable: Defaults.defaultMultiplicationTable
+    )
     
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: gameViewModel)
+            SettingsView(viewModel: SettingsViewModel(settings: initialSettings))
         }
     }
 }
