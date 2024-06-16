@@ -18,23 +18,13 @@ struct Question {
 class GameLogic {
     private let settings: GameSettings
     
-    private(set) var questions: Array<Question> = []
-    private(set) var currentQuestionIndex: Int = 0
-    private(set) var score: Int = 0
+    private var questions: Array<Question> = []
+    private var currentQuestionNumber = 1
+    private var currentQuestionIndex = 0
+    private var score: Int = 0
     
     ///
-    
-    var numberOfQuestions = 0
-    private(set) var selectedTable = 2
-    
-    
-    
-    private(set) var isGameActive = false
-    
-    let possibleNumberOfQuestions = [5, 10, 15]
-    
-    ///
-    ///
+
     init(settings: GameSettings) {
         self.settings = settings
         generateQuestions()
@@ -42,31 +32,41 @@ class GameLogic {
     
     ///
     
-    func getNextQuestion() -> Question? {
-        guard currentQuestionIndex < questions.count else { return nil }
+    func getNumberOfQuestions() -> Int {
+        return settings.numberOfQuestions
+    }
+    
+    func getCurrentQuestionNumber() -> Int {
+        return currentQuestionNumber
+    }
+    
+    func getScore() -> Int {
+        return score
+    }
+    
+    func getCurrentQuestion() -> Question {
+//        guard currentQuestionIndex < questions.count else { return nil }
         return questions[currentQuestionIndex]
+    }
+    
+    func getNextQuestion() -> Question {
+        currentQuestionIndex += 1
+        return getCurrentQuestion()
+    }
+    
+    func increaseScore() {
+        score += 1
+    }
+    
+    func decreaseScore() {
+        if score > 0 {
+            score -= 1
+        }
     }
     
     func startNewGame() {
         questions.removeAll()
         generateQuestions()
-        isGameActive = true
-    }
-    
-    func increaseTableNumber() {
-        if (selectedTable < 10) {
-            selectedTable += 1
-        }
-    }
-    
-    func decreaseTableNumber() {
-        if (selectedTable > 2) {
-            selectedTable -= 1
-        }
-    }
-    
-    func selectedQuestionNumber(at index: Int) {
-        self.numberOfQuestions = possibleNumberOfQuestions[index]
     }
     
     ///

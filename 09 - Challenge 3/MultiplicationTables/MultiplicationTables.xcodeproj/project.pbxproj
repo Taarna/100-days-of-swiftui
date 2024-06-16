@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED7278602C1D9AB600994072 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED72785F2C1D9AB600994072 /* Constants.swift */; };
 		ED7278642C1DA32F00994072 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7278632C1DA32F00994072 /* PlusMinusButton.swift */; };
+		ED72786F2C1E22F200994072 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED72786E2C1E22F200994072 /* KeyboardButton.swift */; };
 		ED9893FB2C1B8E5E0081E745 /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9893FA2C1B8E5E0081E745 /* Font+Custom.swift */; };
 		ED9893FE2C1B9FD70081E745 /* QuestionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9893FD2C1B9FD70081E745 /* QuestionsButton.swift */; };
 		ED9894062C1BA7430081E745 /* arcadeclassic.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED9894052C1BA7430081E745 /* arcadeclassic.regular.ttf */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		ED72785F2C1D9AB600994072 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED7278632C1DA32F00994072 /* PlusMinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
+		ED72786E2C1E22F200994072 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		ED9893FA2C1B8E5E0081E745 /* Font+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Custom.swift"; sourceTree = "<group>"; };
 		ED9893FD2C1B9FD70081E745 /* QuestionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsButton.swift; sourceTree = "<group>"; };
 		ED9894052C1BA7430081E745 /* arcadeclassic.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arcadeclassic.regular.ttf; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				ED7278622C1DA31800994072 /* PlusMinusButton */,
 				ED9893FC2C1B9FA50081E745 /* QuestionsButton */,
+				ED72786D2C1E22D800994072 /* KeyboardButton */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -77,6 +80,14 @@
 				ED9BC4302C1B1DA300576DF0 /* GameViewModel.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		ED72786D2C1E22D800994072 /* KeyboardButton */ = {
+			isa = PBXGroup;
+			children = (
+				ED72786E2C1E22F200994072 /* KeyboardButton.swift */,
+			);
+			path = KeyboardButton;
 			sourceTree = "<group>";
 		};
 		ED9893F92C1B8DFA0081E745 /* Utility */ = {
@@ -236,6 +247,7 @@
 				ED9BC4212C1AF46F00576DF0 /* MultiplicationTablesApp.swift in Sources */,
 				ED9D8EC72C1C662D0013574E /* SettingsViewModel.swift in Sources */,
 				ED7278642C1DA32F00994072 /* PlusMinusButton.swift in Sources */,
+				ED72786F2C1E22F200994072 /* KeyboardButton.swift in Sources */,
 				ED7278602C1D9AB600994072 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
