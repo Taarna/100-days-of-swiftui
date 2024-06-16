@@ -24,12 +24,12 @@ struct GameView: View {
                     
                 }
                 .padding(.horizontal)
-                .font(.pixel(.regular, size: 30.0))
+                .font(.pixel(size: 30.0))
                 
                 Spacer()
                 
                 Text("\(viewModel.getCurrentQuestion().factor1) x \(viewModel.getCurrentQuestion().factor2)")
-                    .font(.pixel(.regular, size: 76.0))
+                    .font(.pixel(size: 76.0))
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 15)
@@ -41,7 +41,7 @@ struct GameView: View {
                 Spacer()
                 
                 Text("\(viewModel.getCurrentAnswer())")
-                    .font(.pixel(.regular, size: 50.0))
+                    .font(.pixel(size: 50.0))
                 
                 VStack {
                     HStack {

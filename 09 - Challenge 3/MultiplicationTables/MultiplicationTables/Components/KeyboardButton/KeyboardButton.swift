@@ -3,7 +3,7 @@ import SwiftUI
 struct KeyboardButtonStyle : ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.arcade(.regular, size: 26.0))
+            .font(.pixel(size: 42.0))
             .frame(width: 50, height: 50)
             .background(.clear)
             .foregroundStyle(.black)

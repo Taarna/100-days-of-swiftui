@@ -3,33 +3,17 @@ import SwiftUI
 
 extension Font {
     
-    enum ArcadeFont {
-        case regular
-        
-        var value: String {
-            switch self {
-            case .regular:
-                return "ArcadeClassic"
-            }
+    /*
+     There are no other types, just regular. If there were (bold, italic, etc.)
+     this would be an enum with all types.
+     */
+    struct PixelFont {
+        static var value: String {
+            return "EXEPixelPerfect"
         }
     }
     
-    enum PixelFont {
-        case regular
-        
-        var value: String {
-            switch self {
-            case .regular:
-                return "EXEPixelPerfect"
-            }
-        }
-    }
-    
-    static func arcade(_ type: ArcadeFont, size: CGFloat = 22) -> Font {
-        return .custom(type.value, size: size)
-    }
-    
-    static func pixel(_ type: PixelFont, size: CGFloat = 22) -> Font {
-        return .custom(type.value, size: size)
+    static func pixel(size: CGFloat = 22) -> Font {
+        return .custom(PixelFont.value, size: size)
     }
 }

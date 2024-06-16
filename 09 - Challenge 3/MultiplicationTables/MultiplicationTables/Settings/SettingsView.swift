@@ -23,7 +23,7 @@ struct SettingsView: View {
                             .buttonStyle(PlusMinusButton())
                             
                             Text("\(viewModel.getMultiplicationTable())")
-                                .font(Font.arcade(.regular, size: 30.0))
+                                .font(Font.pixel(size: 30.0))
                             
                             Button("+") {
                                 viewModel.increaseMultiplicationTable()
@@ -31,7 +31,7 @@ struct SettingsView: View {
                             .buttonStyle(PlusMinusButton())
                         }
                     }
-                    .font(Font.pixel(.regular, size: 30.0))
+                    .font(Font.pixel(size: 30.0))
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
                     
@@ -51,7 +51,7 @@ struct SettingsView: View {
                             }
                         }
                     }
-                    .font(Font.pixel(.regular, size: 30.0))
+                    .font(Font.pixel(size: 30.0))
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
                     
@@ -61,7 +61,7 @@ struct SettingsView: View {
                     
                     NavigationLink(destination: GameView(viewModel: GameViewModel(settings: viewModel.getSettings()))) {
                         Text("Start Game")
-                            .font(Font.pixel(.regular, size: 30.0))
+                            .font(Font.pixel(size: 30.0))
                             .foregroundColor(.black)
                             .padding()
                             .cornerRadius(10)
