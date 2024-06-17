@@ -16,7 +16,7 @@ class SettingsViewModel {
         return settings.numberOfQuestions
     }
     
-    func getPossibleQuestionNumbers() -> Array<Int> {
+    func getQuestionNumbers() -> Array<Int> {
         return Defaults.possibleNumberOfQuestions
     }
     

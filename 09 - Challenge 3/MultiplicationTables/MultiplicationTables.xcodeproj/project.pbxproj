@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED20A0602C1EF99E00E93C20 /* GameTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20A05F2C1EF99E00E93C20 /* GameTextStyle.swift */; };
 		ED7278602C1D9AB600994072 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED72785F2C1D9AB600994072 /* Constants.swift */; };
 		ED7278642C1DA32F00994072 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7278632C1DA32F00994072 /* PlusMinusButton.swift */; };
 		ED72786F2C1E22F200994072 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED72786E2C1E22F200994072 /* KeyboardButton.swift */; };
 		ED9893FB2C1B8E5E0081E745 /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9893FA2C1B8E5E0081E745 /* Font+Custom.swift */; };
-		ED9893FE2C1B9FD70081E745 /* QuestionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9893FD2C1B9FD70081E745 /* QuestionsButton.swift */; };
+		ED9893FE2C1B9FD70081E745 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9893FD2C1B9FD70081E745 /* SettingsButton.swift */; };
 		ED9894062C1BA7430081E745 /* arcadeclassic.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED9894052C1BA7430081E745 /* arcadeclassic.regular.ttf */; };
 		ED9894082C1BA96B0081E745 /* exepixelperfect.medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED9894072C1BA96B0081E745 /* exepixelperfect.medium.ttf */; };
 		ED9BC4212C1AF46F00576DF0 /* MultiplicationTablesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BC4202C1AF46F00576DF0 /* MultiplicationTablesApp.swift */; };
@@ -25,11 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED20A05F2C1EF99E00E93C20 /* GameTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTextStyle.swift; sourceTree = "<group>"; };
 		ED72785F2C1D9AB600994072 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED7278632C1DA32F00994072 /* PlusMinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
 		ED72786E2C1E22F200994072 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		ED9893FA2C1B8E5E0081E745 /* Font+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Custom.swift"; sourceTree = "<group>"; };
-		ED9893FD2C1B9FD70081E745 /* QuestionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsButton.swift; sourceTree = "<group>"; };
+		ED9893FD2C1B9FD70081E745 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
 		ED9894052C1BA7430081E745 /* arcadeclassic.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arcadeclassic.regular.ttf; sourceTree = "<group>"; };
 		ED9894072C1BA96B0081E745 /* exepixelperfect.medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = exepixelperfect.medium.ttf; sourceTree = "<group>"; };
 		ED9BC41D2C1AF46F00576DF0 /* MultiplicationTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiplicationTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,11 +57,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED20A05E2C1EF98E00E93C20 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				ED20A05F2C1EF99E00E93C20 /* GameTextStyle.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		ED7278612C1DA2F900994072 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ED20A05E2C1EF98E00E93C20 /* Text */,
 				ED7278622C1DA31800994072 /* PlusMinusButton */,
-				ED9893FC2C1B9FA50081E745 /* QuestionsButton */,
+				ED9893FC2C1B9FA50081E745 /* SettingsButton */,
 				ED72786D2C1E22D800994072 /* KeyboardButton */,
 			);
 			path = Components;
@@ -99,12 +110,12 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		ED9893FC2C1B9FA50081E745 /* QuestionsButton */ = {
+		ED9893FC2C1B9FA50081E745 /* SettingsButton */ = {
 			isa = PBXGroup;
 			children = (
-				ED9893FD2C1B9FD70081E745 /* QuestionsButton.swift */,
+				ED9893FD2C1B9FD70081E745 /* SettingsButton.swift */,
 			);
-			path = QuestionsButton;
+			path = SettingsButton;
 			sourceTree = "<group>";
 		};
 		ED9BC4142C1AF46F00576DF0 = {
@@ -238,11 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED20A0602C1EF99E00E93C20 /* GameTextStyle.swift in Sources */,
 				ED9D8EC52C1C65BF0013574E /* SettingsView.swift in Sources */,
 				ED9BC4312C1B1DA300576DF0 /* GameViewModel.swift in Sources */,
 				ED9893FB2C1B8E5E0081E745 /* Font+Custom.swift in Sources */,
 				ED9BC42F2C1B1D3400576DF0 /* GameLogic.swift in Sources */,
-				ED9893FE2C1B9FD70081E745 /* QuestionsButton.swift in Sources */,
+				ED9893FE2C1B9FD70081E745 /* SettingsButton.swift in Sources */,
 				ED9BC4232C1AF46F00576DF0 /* GameView.swift in Sources */,
 				ED9BC4212C1AF46F00576DF0 /* MultiplicationTablesApp.swift in Sources */,
 				ED9D8EC72C1C662D0013574E /* SettingsViewModel.swift in Sources */,

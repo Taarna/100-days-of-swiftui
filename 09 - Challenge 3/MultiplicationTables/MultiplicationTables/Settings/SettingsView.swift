@@ -3,7 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     @State private var showGameScreen = false
     
-    private(set) var viewModel: SettingsViewModel
+    private var viewModel: SettingsViewModel
     
     init(viewModel: SettingsViewModel) {
         self.viewModel = viewModel
@@ -12,10 +12,13 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.blue.ignoresSafeArea()
+                Background()
                 
                 VStack {
-                    Section("Which table do you want to practice?") {
+                    VStack {
+                        Text("Select table")
+                            .styleText()
+                        
                         HStack {
                             Button("-") {
                                 viewModel.decreaseMultiplicationTable()
@@ -23,7 +26,7 @@ struct SettingsView: View {
                             .buttonStyle(PlusMinusButton())
                             
                             Text("\(viewModel.getMultiplicationTable())")
-                                .font(Font.pixel(size: 30.0))
+                                .styleText()
                             
                             Button("+") {
                                 viewModel.increaseMultiplicationTable()
@@ -31,48 +34,39 @@ struct SettingsView: View {
                             .buttonStyle(PlusMinusButton())
                         }
                     }
-                    .font(Font.pixel(size: 30.0))
-                    .multilineTextAlignment(.center)
-                    .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
                     
                     Spacer()
                         .frame(height: 30)
                     
-                    Section("How many questions?") {
-                        HStack {
-                            ForEach(0..<viewModel.getPossibleQuestionNumbers().count, id: \.self) { questionIndex in
-                                let numOfQuestions = viewModel.getPossibleQuestionNumbers()[questionIndex]
-                                Button(action: {
-                                    viewModel.setNumberOfQuestions(numOfQuestions)
-                                }) {
-                                    Text("\(numOfQuestions)")
+                    VStack {
+                        Text("How many questions?")
+                            .styleText()
+                        
+                        HStack(spacing: 12) {
+                            ForEach(viewModel.getQuestionNumbers(), id: \.self) { questionNum in
+                                Button {
+                                    withAnimation {
+                                        viewModel.setNumberOfQuestions(questionNum)
+                                    }
+                                } label: {
+                                    Text("\(questionNum)")
+                                        .frame(width: 25, height: 25)
                                 }
-                                .buttonStyle(QuestionsButton(isSelected: viewModel.getNumberOfQuestions() == numOfQuestions))
+                                .buttonStyle(SettingsButton(isSelected: viewModel.getNumberOfQuestions() == questionNum))
+                                
                             }
                         }
                     }
-                    .font(Font.pixel(size: 30.0))
-                    .multilineTextAlignment(.center)
-                    .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
-                    
                     
                     Spacer()
-                        .frame(height: 50)
+                        .frame(height: 60)
                     
                     NavigationLink(destination: GameView(viewModel: GameViewModel(settings: viewModel.getSettings()))) {
                         Text("Start Game")
-                            .font(Font.pixel(size: 30.0))
-                            .foregroundColor(.black)
-                            .padding()
-                            .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.black, lineWidth: 3)
-                            )
-                            .padding()
                     }
+                    .buttonStyle(SettingsButton(isSelected: false))
                 }
-                .padding()
+                .padding(30)
                 .background(
                     RoundedRectangle(cornerRadius: 15)
                         .fill(Color.yellow)
@@ -80,6 +74,12 @@ struct SettingsView: View {
                 )
                 
             }
+        }
+    }
+    
+    struct Background: View {
+        var body: some View {
+            Color.blue.ignoresSafeArea()
         }
     }
 }
