@@ -1,14 +1,9 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State var viewModel: SettingsViewModel
     @State private var isGameActive = false
-    
-    private var viewModel: SettingsViewModel
-    
-    init(viewModel: SettingsViewModel) {
-        self.viewModel = viewModel
-    }
-    
+
     var body: some View {
         NavigationStack {
             ZStack {
