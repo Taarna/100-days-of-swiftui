@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var showGameScreen = false
+    @State private var isGameActive = false
     
     private var viewModel: SettingsViewModel
     
@@ -61,10 +61,13 @@ struct SettingsView: View {
                     Spacer()
                         .frame(height: 60)
                     
-                    NavigationLink(destination: GameView(viewModel: GameViewModel(settings: viewModel.getSettings()))) {
-                        Text("Start Game")
+                    Button("Start Game") {
+                        isGameActive = true
                     }
                     .buttonStyle(SettingsButton(isSelected: false))
+                    .navigationDestination(isPresented: $isGameActive) {
+                        GameView(viewModel: GameViewModel(settings: viewModel.getSettings()), isGameActive: $isGameActive)
+                    }
                 }
                 .padding(30)
                 .background(
@@ -75,6 +78,7 @@ struct SettingsView: View {
                 
             }
         }
+        .toolbar(.hidden, for: .navigationBar)
     }
     
     struct Background: View {

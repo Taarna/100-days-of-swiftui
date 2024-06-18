@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct GameView: View {
-    var viewModel: GameViewModel
+    @State var viewModel: GameViewModel
     @State private var isAlertPresented = false
+    
+    @Binding var isGameActive: Bool
     
     var body: some View {
         ZStack {
@@ -86,14 +88,17 @@ struct GameView: View {
                 }
             }
         }
+        .toolbar(.hidden, for: .navigationBar)
         .alert("Game Over", isPresented: $isAlertPresented) {
             Button("Start New Game") {
                 viewModel.startNewGame()
+                isGameActive = false
             }
         }
     }
 }
 
 #Preview {
-    GameView(viewModel: GameViewModel(settings: GameSettings(numberOfQuestions: 5, multiplicationTable: 5)))
+    @State var isGameActive = true
+    return GameView(viewModel: GameViewModel(settings: GameSettings(numberOfQuestions: 5, multiplicationTable: 5)), isGameActive: $isGameActive)
 }
