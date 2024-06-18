@@ -6,5 +6,7 @@
 	<array>
 		<string>exepixelperfect.medium.ttf</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
