@@ -29,6 +29,7 @@ struct GameView: View {
                 .font(.pixel(size: 30.0))
                 
                 Spacer()
+                    .frame(height: 100)
                 
                 Text("\(viewModel.getCurrentQuestion().factor1) x \(viewModel.getCurrentQuestion().factor2)")
                     .font(.pixel(size: 76.0))
@@ -42,8 +43,16 @@ struct GameView: View {
                 
                 Spacer()
                 
-                Text("\(viewModel.getCurrentAnswer())")
+                Text("= \(viewModel.getCurrentAnswer())")
                     .font(.pixel(size: 50.0))
+                    .background(
+                        RoundedRectangle(cornerRadius: 7)
+                            .fill(Color.yellow)
+                            .shadow(radius: 10)
+                            .frame(width: 230, height: 40)
+                    )
+                
+                Spacer()
                 
                 VStack {
                     HStack {
@@ -79,13 +88,15 @@ struct GameView: View {
                             viewModel.setAnswerNumber(0)
                         }
                         .buttonStyle(KeyboardButtonStyle())
-                        Button("\u{2713}") {
+                        Button("=") {
                             viewModel.answerConfirmed()
                             isAlertPresented = viewModel.getIsGameFinished()
                         }
                         .buttonStyle(KeyboardButtonStyle())
                     }
                 }
+                
+                Spacer()
             }
         }
         .toolbar(.hidden, for: .navigationBar)
