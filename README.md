@@ -26,8 +26,16 @@ I've skipped days 1-15 and started with [Day 16](https://www.hackingwithswift.co
 
 **Days 29 - 31**
 
-Project 5 - Word Scramble
+[Project 5 - Word Scramble](https://github.com/Taarna/100-days-of-swiftui/tree/main/07%20-%20Project%205/WordScramble)
 
 **Days 32 - 34**
 
-Project 6 - Animations
+[Project 6 - Animations](https://github.com/Taarna/100-days-of-swiftui/tree/main/08%20-%20Project%206)
+
+**Day 35**
+
+[Challenge 3 - Multiplication tables](https://github.com/Taarna/100-days-of-swiftui/tree/main/08%20-%20Project%206/Animations)
+
+**Days 36 - 38**
+
+Project 7 - iExpense
