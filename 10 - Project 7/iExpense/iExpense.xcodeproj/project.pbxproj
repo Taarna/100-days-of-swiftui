@@ -14,6 +14,8 @@
 		ED95F13F2C22273700D9E7D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95F13E2C22273700D9E7D8 /* ContentView.swift */; };
 		ED95F1412C22273B00D9E7D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED95F1402C22273B00D9E7D8 /* Assets.xcassets */; };
 		ED95F1442C22273B00D9E7D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED95F1432C22273B00D9E7D8 /* Preview Assets.xcassets */; };
+		EDA3867D2C242CE00016AF87 /* AmountStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3867C2C242CE00016AF87 /* AmountStyle.swift */; };
+		EDA3867F2C2434A10016AF87 /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3867E2C2434A10016AF87 /* ListRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		ED95F13E2C22273700D9E7D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ED95F1402C22273B00D9E7D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED95F1432C22273B00D9E7D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDA3867C2C242CE00016AF87 /* AmountStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountStyle.swift; sourceTree = "<group>"; };
+		EDA3867E2C2434A10016AF87 /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				ED9295CE2C22FF8300541550 /* Expenses.swift */,
 				ED9295D02C23086900541550 /* AddView.swift */,
 				ED95F13E2C22273700D9E7D8 /* ContentView.swift */,
+				EDA3867E2C2434A10016AF87 /* ListRow.swift */,
+				EDA3867C2C242CE00016AF87 /* AmountStyle.swift */,
 				ED95F1402C22273B00D9E7D8 /* Assets.xcassets */,
 				ED95F1422C22273B00D9E7D8 /* Preview Content */,
 			);
@@ -151,6 +157,8 @@
 				ED9295D12C23086900541550 /* AddView.swift in Sources */,
 				ED9295CD2C22FF1900541550 /* ExpenseItem.swift in Sources */,
 				ED95F13D2C22273700D9E7D8 /* iExpenseApp.swift in Sources */,
+				EDA3867F2C2434A10016AF87 /* ListRow.swift in Sources */,
+				EDA3867D2C242CE00016AF87 /* AmountStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

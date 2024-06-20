@@ -8,19 +8,18 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
-                        }
-
-                        Spacer()
-                        Text(item.amount, format: .currency(code: "USD"))
+                Section("Private") {
+                    ForEach(expenses.privateItems) { item in
+                        ListRow(name: item.name, type: item.type, amount: item.amount)
                     }
+                    .onDelete(perform: removePrivateItems)
                 }
-                .onDelete(perform: removeItems)
+                Section("Business") {
+                    ForEach(expenses.businessItems) { item in
+                        ListRow(name: item.name, type: item.type, amount: item.amount)
+                    }
+                    .onDelete(perform: removeBusinessItems)
+                }
             }
             .navigationTitle("iExpense")
             .toolbar {
@@ -34,8 +33,12 @@ struct ContentView: View {
         }
     }
     
-    private func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
+    private func removePrivateItems(at offsets: IndexSet) {
+        expenses.privateItems.remove(atOffsets: offsets)
+    }
+    
+    private func removeBusinessItems(at offsets: IndexSet) {
+        expenses.businessItems.remove(atOffsets: offsets)
     }
 }
 

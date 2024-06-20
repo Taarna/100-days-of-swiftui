@@ -24,14 +24,18 @@ struct AddView: View {
                     }
                 }
                 
-                TextField("Amount", value: $amount, format: .currency(code: "USD"))
+                TextField("Amount", value: $amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Add new expense")
             .toolbar {
                 Button("Save") {
                     let item = ExpenseItem(name: name, type: type, amount: amount)
-                    expenses.items.append(item)
+                    if (type == "Personal") {
+                        expenses.privateItems.append(item)
+                    } else {
+                        expenses.businessItems.append(item)
+                    }
                     dismiss()
                 }
             }
