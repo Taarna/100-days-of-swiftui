@@ -1,53 +1,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isShowingGrid = false
+    
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     let missions: [Mission] = Bundle.main.decode("missions.json")
     
+    private var toolbarIcon: String {
+        return isShowingGrid ? "rectangle.grid.1x2" : "rectangle.grid.3x2"
+    }
+    
     var body: some View {
-        let columns = [
-            GridItem(.adaptive(minimum: 150))
-        ]
-        
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(missions) { mission in
-                        NavigationLink {
-                            MissionView(mission: mission, astronauts: astronauts)
-                        } label: {
-                            VStack {
-                                Image(mission.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding()
-                                
-                                VStack {
-                                    Text(mission.displayName)
-                                        .font(.headline)
-                                        .foregroundStyle(.white)
-                                    Text(mission.formattedLaunchDate)
-                                        .font(.caption)
-                                        .foregroundStyle(.white.opacity(0.5))
-                                }
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .background(.lightBackground)
-                            }
-                            .clipShape(.rect(cornerRadius: 10))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.lightBackground)
-                            )
-                        }
-                    }
+            Group {
+                if isShowingGrid {
+                    MissionsGridLayout(missions: missions, astronauts: astronauts)
+                } else {
+                    MissionsListLayout(missions: missions, astronauts: astronauts)
                 }
-                .padding([.horizontal, .bottom])
             }
             .navigationTitle("Moonshot")
             .background(.darkBackground)
             .preferredColorScheme(.dark)
+            .toolbar {
+                Button(action: {
+                    isShowingGrid.toggle()
+                }, label: {
+                    Image(systemName: toolbarIcon)
+                })
+            }
         }
     }
 }
