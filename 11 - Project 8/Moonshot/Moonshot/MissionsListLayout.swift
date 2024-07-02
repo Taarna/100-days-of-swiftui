@@ -7,9 +7,7 @@ struct MissionsListLayout: View {
     var body: some View {
         List {
             ForEach(missions) { mission in
-                NavigationLink {
-                    MissionDetailsView(mission: mission, astronauts: astronauts)
-                } label: {
+                NavigationLink(value: mission) {
                     MissionCellView(mission: mission)
                 }
             }
@@ -17,6 +15,9 @@ struct MissionsListLayout: View {
         }
         .padding([.horizontal, .bottom])
         .listStyle(.plain)
+        .navigationDestination(for: Mission.self, destination: { mission in
+            MissionDetailsView(mission: mission, astronauts: astronauts)
+        })
     }
 }
 

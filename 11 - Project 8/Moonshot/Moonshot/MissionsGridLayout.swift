@@ -12,14 +12,15 @@ struct MissionsGridLayout: View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach(missions) { mission in
-                    NavigationLink {
-                        MissionDetailsView(mission: mission, astronauts: astronauts)
-                    } label: {
+                    NavigationLink(value: mission) {
                         MissionCellView(mission: mission)
                     }
                 }
             }
             .padding([.horizontal, .bottom])
+            .navigationDestination(for: Mission.self, destination: { mission in
+                MissionDetailsView(mission: mission, astronauts: astronauts)
+            })
         }
     }
 }
