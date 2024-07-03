@@ -38,4 +38,16 @@ I've skipped days 1-15 and started with [Day 16](https://www.hackingwithswift.co
 
 **Days 36 - 38**
 
-Project 7 - iExpense
+[Project 7 - iExpense](https://github.com/Taarna/100-days-of-swiftui/tree/main/10%20-%20Project%207/iExpense)
+
+**Days 39 - 42**
+
+[Project 8 - Moonshot](https://github.com/Taarna/100-days-of-swiftui/tree/main/11%20-%20Project%208/Moonshot)
+
+**Days 43 - 46**
+
+[Project 9 - Navigation](https://github.com/Taarna/100-days-of-swiftui/tree/main/12%20-%20Project%209/Navigation)
+
+**Day 47**
+
+Challenge 4 - Habit tracking app
