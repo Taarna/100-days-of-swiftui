@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED85E8EB2C35B9C000D55990 /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED85E8EA2C35B9C000D55990 /* AddHabitView.swift */; };
+		EDA5C8252C35736D0020BD2B /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5C8242C35736D0020BD2B /* Habit.swift */; };
+		EDA5C8272C35762C0020BD2B /* Habits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5C8262C35762C0020BD2B /* Habits.swift */; };
 		EDBB5A6A2C34960D0083AF22 /* HabbitonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB5A692C34960D0083AF22 /* HabbitonApp.swift */; };
-		EDBB5A6C2C34960D0083AF22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB5A6B2C34960D0083AF22 /* ContentView.swift */; };
+		EDBB5A6C2C34960D0083AF22 /* HabitsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB5A6B2C34960D0083AF22 /* HabitsListView.swift */; };
 		EDBB5A6E2C3496100083AF22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBB5A6D2C3496100083AF22 /* Assets.xcassets */; };
 		EDBB5A712C3496100083AF22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBB5A702C3496100083AF22 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED85E8EA2C35B9C000D55990 /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
+		EDA5C8242C35736D0020BD2B /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		EDA5C8262C35762C0020BD2B /* Habits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
 		EDBB5A662C34960D0083AF22 /* Habbiton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habbiton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBB5A692C34960D0083AF22 /* HabbitonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabbitonApp.swift; sourceTree = "<group>"; };
-		EDBB5A6B2C34960D0083AF22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDBB5A6B2C34960D0083AF22 /* HabitsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsListView.swift; sourceTree = "<group>"; };
 		EDBB5A6D2C3496100083AF22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDBB5A702C3496100083AF22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +38,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED85E8E92C35B9A200D55990 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDBB5A6B2C34960D0083AF22 /* HabitsListView.swift */,
+				ED85E8EA2C35B9C000D55990 /* AddHabitView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDA5C8232C35732C0020BD2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EDA5C8242C35736D0020BD2B /* Habit.swift */,
+				EDA5C8262C35762C0020BD2B /* Habits.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EDBB5A5D2C34960C0083AF22 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +75,9 @@
 		EDBB5A682C34960D0083AF22 /* Habbiton */ = {
 			isa = PBXGroup;
 			children = (
+				EDA5C8232C35732C0020BD2B /* Model */,
+				ED85E8E92C35B9A200D55990 /* View */,
 				EDBB5A692C34960D0083AF22 /* HabbitonApp.swift */,
-				EDBB5A6B2C34960D0083AF22 /* ContentView.swift */,
 				EDBB5A6D2C3496100083AF22 /* Assets.xcassets */,
 				EDBB5A6F2C3496100083AF22 /* Preview Content */,
 			);
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDBB5A6C2C34960D0083AF22 /* ContentView.swift in Sources */,
+				EDA5C8252C35736D0020BD2B /* Habit.swift in Sources */,
+				EDBB5A6C2C34960D0083AF22 /* HabitsListView.swift in Sources */,
+				EDA5C8272C35762C0020BD2B /* Habits.swift in Sources */,
 				EDBB5A6A2C34960D0083AF22 /* HabbitonApp.swift in Sources */,
+				ED85E8EB2C35B9C000D55990 /* AddHabitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

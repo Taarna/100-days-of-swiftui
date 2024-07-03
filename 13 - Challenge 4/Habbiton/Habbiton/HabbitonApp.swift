@@ -6,7 +6,7 @@ import SwiftUI
 struct HabbitonApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HabitsListView()
         }
     }
 }
