@@ -17,6 +17,7 @@
 		EDBB5A6C2C34960D0083AF22 /* HabitsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB5A6B2C34960D0083AF22 /* HabitsListView.swift */; };
 		EDBB5A6E2C3496100083AF22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBB5A6D2C3496100083AF22 /* Assets.xcassets */; };
 		EDBB5A712C3496100083AF22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBB5A702C3496100083AF22 /* Preview Assets.xcassets */; };
+		EDDD11022C36B5660025FA6A /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD11012C36B5660025FA6A /* RoundedTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		EDBB5A6B2C34960D0083AF22 /* HabitsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsListView.swift; sourceTree = "<group>"; };
 		EDBB5A6D2C3496100083AF22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDBB5A702C3496100083AF22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDDD11012C36B5660025FA6A /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 		ED85E8E92C35B9A200D55990 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EDDD11002C36B54D0025FA6A /* Components */,
 				EDBB5A6B2C34960D0083AF22 /* HabitsListView.swift */,
 				ED85E8EA2C35B9C000D55990 /* AddHabitView.swift */,
 				ED805B4E2C3689420043EADF /* HabitDetailsView.swift */,
@@ -99,6 +102,14 @@
 				EDBB5A702C3496100083AF22 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDDD11002C36B54D0025FA6A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD11012C36B5660025FA6A /* RoundedTextField.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +189,7 @@
 				ED805B512C3698610043EADF /* Day.swift in Sources */,
 				ED805B4F2C3689420043EADF /* HabitDetailsView.swift in Sources */,
 				ED805B532C3699130043EADF /* DayCompletion.swift in Sources */,
+				EDDD11022C36B5660025FA6A /* RoundedTextField.swift in Sources */,
 				ED85E8EB2C35B9C000D55990 /* AddHabitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

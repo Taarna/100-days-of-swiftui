@@ -19,8 +19,8 @@ struct AddHabitView: View {
                 }
             }
             VStack {
-                TextField("Name", text: $name)
-                TextField("Description", text: $description)
+                RoundedTextField(placeholder: "Name", text: $name)
+                RoundedTextField(placeholder: "Description", text: $description)
                 Spacer()
             }
             .padding()
