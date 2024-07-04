@@ -11,12 +11,9 @@ struct AddHabitView: View {
     var body: some View {
         VStack {
             HStack {
-                Button("Dismiss") {
-                    dismiss()
-                }
                 Spacer()
                 Button("Save") {
-                    let newHabit = Habit(name: name, description: description, timesCompleted: 0)
+                    let newHabit = Habit(name: name, description: description)
                     habits.items.append(newHabit)
                     dismiss()
                 }
