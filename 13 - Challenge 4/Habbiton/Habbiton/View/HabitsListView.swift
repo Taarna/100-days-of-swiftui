@@ -13,6 +13,11 @@ struct HabitsListView: View {
                             VStack(alignment: .leading) {
                                 Text(habit.name)
                                 Text(habit.description)
+                                HStack {
+                                    ForEach(habit.days, id: \.day) { dayCompletion in
+                                        Text(dayCompletion.day.firstLetter)
+                                    }
+                                }
                             }
                         }
                     }
