@@ -7,13 +7,22 @@ struct HabitsListView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                LazyVStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, content: {
+                LazyVStack(alignment: .leading) {
                     ForEach(habits.items) { habit in
-                        Text(habit.name)
+                        NavigationLink(value: habit) {
+                            VStack(alignment: .leading) {
+                                Text(habit.name)
+                                Text(habit.description)
+                            }
+                        }
                     }
-                })
+                }
+                .padding()
             }
             .navigationTitle("Habbiton")
+            .navigationDestination(for: Habit.self, destination: { habit in
+                HabitDetailsView(habit: habit)
+            })
             .toolbar {
                 Button("Add") {
                     isAddHabitPresented = true
