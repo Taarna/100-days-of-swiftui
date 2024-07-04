@@ -18,6 +18,7 @@
 		EDBB5A6E2C3496100083AF22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBB5A6D2C3496100083AF22 /* Assets.xcassets */; };
 		EDBB5A712C3496100083AF22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBB5A702C3496100083AF22 /* Preview Assets.xcassets */; };
 		EDDD11022C36B5660025FA6A /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD11012C36B5660025FA6A /* RoundedTextField.swift */; };
+		EDDD11042C36CAB00025FA6A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD11032C36CAB00025FA6A /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		EDBB5A6D2C3496100083AF22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDBB5A702C3496100083AF22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDDD11012C36B5660025FA6A /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		EDDD11032C36CAB00025FA6A /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		EDBB5A682C34960D0083AF22 /* Habbiton */ = {
 			isa = PBXGroup;
 			children = (
+				EDDD11052C36CCA50025FA6A /* Extensions */,
 				EDA5C8232C35732C0020BD2B /* Model */,
 				ED85E8E92C35B9A200D55990 /* View */,
 				EDBB5A692C34960D0083AF22 /* HabbitonApp.swift */,
@@ -110,6 +113,14 @@
 				EDDD11012C36B5660025FA6A /* RoundedTextField.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		EDDD11052C36CCA50025FA6A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD11032C36CAB00025FA6A /* Date.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA5C8252C35736D0020BD2B /* Habit.swift in Sources */,
+				EDDD11042C36CAB00025FA6A /* Date.swift in Sources */,
 				EDBB5A6C2C34960D0083AF22 /* HabitsListView.swift in Sources */,
 				EDA5C8272C35762C0020BD2B /* Habits.swift in Sources */,
 				EDBB5A6A2C34960D0083AF22 /* HabbitonApp.swift in Sources */,

@@ -7,8 +7,8 @@ struct HabitDetailsView: View {
         VStack {
             Spacer()
                 .frame(height: 30)
-            Text("Wed, 4")
-            Text("320")
+            Text(Date.currentFormatted)
+            Text("\(habit.timesCompleted)")
                 .foregroundStyle(Color.counter)
                 .font(.title)
                 .padding(50)
@@ -20,8 +20,8 @@ struct HabitDetailsView: View {
                 .frame(height: 80)
             
             HStack {
-                ForEach(Day.allCases, id: \.self) { day in
-                    Text(day.firstLetter)
+                ForEach(habit.days, id: \.day) { dayCompletion in
+                    Text(dayCompletion.day.firstLetter)
                         .foregroundStyle(Color.counter)
                         .padding()
                         .frame(width: 48)
@@ -35,9 +35,9 @@ struct HabitDetailsView: View {
             .padding()
             Spacer()
                 
-            Text("Hydration")
+            Text(habit.name)
                 .font(.system(size: 64))
-            Text("Drink at least 2L of water daily")
+            Text(habit.description)
             Spacer()
         }
     }
