@@ -2,7 +2,7 @@ import SwiftUI
 
 struct HabitsListView: View {
     @State private var habits = Habits()
-    @State private var isAddExpensePresented = false
+    @State private var isAddHabitPresented = false
     
     var body: some View {
         NavigationStack {
@@ -16,10 +16,10 @@ struct HabitsListView: View {
             .navigationTitle("Habbiton")
             .toolbar {
                 Button("Add") {
-                    isAddExpensePresented = true
+                    isAddHabitPresented = true
                 }
             }
-            .sheet(isPresented: $isAddExpensePresented) {
+            .sheet(isPresented: $isAddHabitPresented) {
                 AddHabitView(habits: habits)
             }
         }
