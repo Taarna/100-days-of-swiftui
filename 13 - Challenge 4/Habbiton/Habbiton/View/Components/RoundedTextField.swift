@@ -10,7 +10,7 @@ struct RoundedTextField: View {
             .padding()
             .overlay(
                 RoundedRectangle(cornerRadius: 18)
-                    .stroke(Color.accentColor, lineWidth: 2)
+                    .stroke(Color.accent, lineWidth: 2)
             )
     }
 }
