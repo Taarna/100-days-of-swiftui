@@ -6,15 +6,14 @@ struct AddHabitView: View {
     @State private var name = ""
     @State private var description = ""
     
-    var habits: Habits
+    @State var viewModel: AddHabitViewModel
     
     var body: some View {
         VStack {
             HStack {
                 Spacer()
                 Button("Save") {
-                    let newHabit = Habit(name: name, description: description)
-                    habits.items.append(newHabit)
+                    viewModel.addHabit(name: name, description: description)
                     dismiss()
                 }
             }
@@ -30,5 +29,5 @@ struct AddHabitView: View {
 }
 
 #Preview {
-    AddHabitView(habits: Habits())
+    AddHabitView(viewModel: AddHabitViewModel(habits: Habits()))
 }

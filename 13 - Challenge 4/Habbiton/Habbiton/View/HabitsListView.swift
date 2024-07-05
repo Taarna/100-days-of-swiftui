@@ -34,7 +34,7 @@ struct HabitsListView: View {
                 }
             }
             .sheet(isPresented: $isAddHabitPresented) {
-                AddHabitView(habits: habits)
+                AddHabitView(viewModel: AddHabitViewModel(habits: habits))
             }
         }
     }
