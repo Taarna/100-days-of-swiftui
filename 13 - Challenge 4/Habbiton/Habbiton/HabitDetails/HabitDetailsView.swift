@@ -18,9 +18,9 @@ struct HabitDetailsView: View {
                 .frame(height: 80)
             
             HStack {
-                ForEach(viewModel.getDays(), id: \.day) { dayCompletion in
-                    let isCurrentDay = viewModel.isCurrentDay(dayCompletion)
-                    let isCompleted = viewModel.isDayCompleted(dayCompletion)
+                ForEach(viewModel.getDays(), id: \.self) { dayCompletion in
+                    let isCurrentDay = dayCompletion.isCurrentDay
+                    let isCompleted = dayCompletion.isCompleted
                     
                     Button(dayCompletion.firstLetter) {
                         viewModel.updateHabit(forDayCompletion: dayCompletion)

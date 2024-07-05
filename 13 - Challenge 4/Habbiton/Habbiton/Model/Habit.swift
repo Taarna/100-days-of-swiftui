@@ -6,6 +6,6 @@ struct Habit: Codable, Identifiable, Hashable {
     let description: String
     var timesCompleted = 0
     var days: [DayCompletion] = Day.allCases.map { day in
-        return DayCompletion(day: day, completed: false)
+        return DayCompletion(day: day, isCompleted: false)
     }
 }

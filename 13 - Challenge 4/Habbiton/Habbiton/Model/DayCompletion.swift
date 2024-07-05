@@ -1,9 +1,13 @@
+import Foundation
 
 struct DayCompletion: Codable, Hashable {
     let day: Day
-    var completed: Bool
+    var isCompleted: Bool
     
     var firstLetter: String {
         day.firstLetter
+    }
+    var isCurrentDay: Bool {
+        Date.currentDay == day.firstThreeLetters
     }
 }
