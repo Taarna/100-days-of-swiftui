@@ -12,13 +12,21 @@ struct HabitsListView: View {
                         NavigationLink(value: habit) {
                             VStack(alignment: .leading) {
                                 Text(habit.name)
+                                    .font(.system(size: 44))
                                 Text(habit.description)
                                 HStack {
                                     ForEach(habit.days, id: \.day) { dayCompletion in
-                                        Text(dayCompletion.firstLetter)
+                                        let isCurrentDay = viewModel.isCurrentDay(dayCompletion)
+                                        let isCompleted = viewModel.isDayCompleted(dayCompletion)
+                                        
+                                        Button(dayCompletion.firstLetter) {
+                                            viewModel.updateHabit(habit, forDayCompletion: dayCompletion)
+                                        }
+                                        .buttonStyle(DayButton(isCompleted: isCompleted, isCurrentDay: isCurrentDay))
                                     }
                                 }
                             }
+                            .padding(.vertical)
                         }
                     }
                 }
