@@ -16,6 +16,7 @@ struct AddHabitView: View {
                     viewModel.addHabit(name: name, description: description)
                     dismiss()
                 }
+                .disabled(name.isEmpty || description.isEmpty)
             }
             VStack {
                 RoundedTextField(placeholder: "Name", text: $name)
