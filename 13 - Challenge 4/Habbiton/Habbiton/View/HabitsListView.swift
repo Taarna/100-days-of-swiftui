@@ -26,7 +26,7 @@ struct HabitsListView: View {
             }
             .navigationTitle("Habbiton")
             .navigationDestination(for: Habit.self, destination: { habit in
-                HabitDetailsView(habit: habit)
+                HabitDetailsView(viewModel: HabitDetailsViewModel(habit: habit, habits: habits))
             })
             .toolbar {
                 Button("Add") {

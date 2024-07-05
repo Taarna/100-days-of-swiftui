@@ -4,4 +4,7 @@ enum Day: String, Codable, CaseIterable {
     var firstLetter: String {
         String(self.rawValue.prefix(1)).capitalized
     }
+    var firstThreeLetters: String {
+        String(self.rawValue.prefix(3)).capitalized
+    }
 }
