@@ -26,10 +26,6 @@ class HabitDetailsViewModel {
         habit.days
     }
     
-    func getFirstLetter(forDayCompletion dayCompletion: DayCompletion) -> String {
-        dayCompletion.day.firstLetter
-    }
-    
     func updateHabit(forDayCompletion dayCompletion: DayCompletion) {
         guard let dayCompletionIndex = habit.days.firstIndex(of: dayCompletion) else { return }
         guard let habitIndex = habits.items.firstIndex(of: habit) else { return }

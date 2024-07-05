@@ -1,21 +1,21 @@
 import SwiftUI
 
 struct HabitsListView: View {
-    @State private var habits = Habits()
+    @State var viewModel: HabitsListViewModel
     @State private var isAddHabitPresented = false
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack(alignment: .leading) {
-                    ForEach(habits.items) { habit in
+                    ForEach(viewModel.habits.items) { habit in
                         NavigationLink(value: habit) {
                             VStack(alignment: .leading) {
                                 Text(habit.name)
                                 Text(habit.description)
                                 HStack {
                                     ForEach(habit.days, id: \.day) { dayCompletion in
-                                        Text(dayCompletion.day.firstLetter)
+                                        Text(dayCompletion.firstLetter)
                                     }
                                 }
                             }
@@ -26,7 +26,7 @@ struct HabitsListView: View {
             }
             .navigationTitle("Habbiton")
             .navigationDestination(for: Habit.self, destination: { habit in
-                HabitDetailsView(viewModel: HabitDetailsViewModel(habit: habit, habits: habits))
+                HabitDetailsView(viewModel: HabitDetailsViewModel(habit: habit, habits: viewModel.habits))
             })
             .toolbar {
                 Button("Add") {
@@ -34,12 +34,12 @@ struct HabitsListView: View {
                 }
             }
             .sheet(isPresented: $isAddHabitPresented) {
-                AddHabitView(viewModel: AddHabitViewModel(habits: habits))
+                AddHabitView(viewModel: AddHabitViewModel(habits: viewModel.habits))
             }
         }
     }
 }
 
 #Preview {
-    HabitsListView()
+    HabitsListView(viewModel: HabitsListViewModel(habits: Habits()))
 }

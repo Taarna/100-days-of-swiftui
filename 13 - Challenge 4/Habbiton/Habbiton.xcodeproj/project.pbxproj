@@ -13,6 +13,7 @@
 		ED805B532C3699130043EADF /* DayCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED805B522C3699130043EADF /* DayCompletion.swift */; };
 		ED85E8EB2C35B9C000D55990 /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED85E8EA2C35B9C000D55990 /* AddHabitView.swift */; };
 		ED8854C92C37D7FB00A37F3C /* AddHabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8854C82C37D7FB00A37F3C /* AddHabitViewModel.swift */; };
+		ED8854CC2C37DD8500A37F3C /* HabitsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8854CB2C37DD8500A37F3C /* HabitsListViewModel.swift */; };
 		EDA5C8252C35736D0020BD2B /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5C8242C35736D0020BD2B /* Habit.swift */; };
 		EDA5C8272C35762C0020BD2B /* Habits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5C8262C35762C0020BD2B /* Habits.swift */; };
 		EDBB5A6A2C34960D0083AF22 /* HabbitonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB5A692C34960D0083AF22 /* HabbitonApp.swift */; };
@@ -31,6 +32,7 @@
 		ED805B522C3699130043EADF /* DayCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCompletion.swift; sourceTree = "<group>"; };
 		ED85E8EA2C35B9C000D55990 /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
 		ED8854C82C37D7FB00A37F3C /* AddHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewModel.swift; sourceTree = "<group>"; };
+		ED8854CB2C37DD8500A37F3C /* HabitsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsListViewModel.swift; sourceTree = "<group>"; };
 		EDA5C8242C35736D0020BD2B /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		EDA5C8262C35762C0020BD2B /* Habits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
 		EDBB5A662C34960D0083AF22 /* Habbiton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habbiton.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,14 +56,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ED85E8E92C35B9A200D55990 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EDBB5A6B2C34960D0083AF22 /* HabitsListView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		ED8854C62C37D77500A37F3C /* HabitDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +72,15 @@
 				ED8854C82C37D7FB00A37F3C /* AddHabitViewModel.swift */,
 			);
 			path = AddHabit;
+			sourceTree = "<group>";
+		};
+		ED8854CA2C37DD6100A37F3C /* HabitsList */ = {
+			isa = PBXGroup;
+			children = (
+				EDBB5A6B2C34960D0083AF22 /* HabitsListView.swift */,
+				ED8854CB2C37DD8500A37F3C /* HabitsListViewModel.swift */,
+			);
+			path = HabitsList;
 			sourceTree = "<group>";
 		};
 		EDA5C8232C35732C0020BD2B /* Model */ = {
@@ -113,9 +116,9 @@
 				EDDD11052C36CCA50025FA6A /* Extensions */,
 				EDA5C8232C35732C0020BD2B /* Model */,
 				EDDD11002C36B54D0025FA6A /* Components */,
+				ED8854CA2C37DD6100A37F3C /* HabitsList */,
 				ED8854C62C37D77500A37F3C /* HabitDetails */,
 				ED8854C72C37D7D600A37F3C /* AddHabit */,
-				ED85E8E92C35B9A200D55990 /* View */,
 				EDBB5A692C34960D0083AF22 /* HabbitonApp.swift */,
 				EDBB5A6D2C3496100083AF22 /* Assets.xcassets */,
 				EDBB5A6F2C3496100083AF22 /* Preview Content */,
@@ -223,6 +226,7 @@
 				EDDD11072C36CE890025FA6A /* DayButton.swift in Sources */,
 				EDDD11042C36CAB00025FA6A /* Date.swift in Sources */,
 				EDBB5A6C2C34960D0083AF22 /* HabitsListView.swift in Sources */,
+				ED8854CC2C37DD8500A37F3C /* HabitsListViewModel.swift in Sources */,
 				EDA5C8272C35762C0020BD2B /* Habits.swift in Sources */,
 				EDBB5A6A2C34960D0083AF22 /* HabbitonApp.swift in Sources */,
 				ED805B512C3698610043EADF /* Day.swift in Sources */,

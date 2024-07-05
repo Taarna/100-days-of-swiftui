@@ -22,7 +22,7 @@ struct HabitDetailsView: View {
                     let isCurrentDay = viewModel.isCurrentDay(dayCompletion)
                     let isCompleted = viewModel.isDayCompleted(dayCompletion)
                     
-                    Button(viewModel.getFirstLetter(forDayCompletion: dayCompletion)) {
+                    Button(dayCompletion.firstLetter) {
                         viewModel.updateHabit(forDayCompletion: dayCompletion)
                     }
                     .buttonStyle(DayButton(isCompleted: isCompleted, isCurrentDay: isCurrentDay))
