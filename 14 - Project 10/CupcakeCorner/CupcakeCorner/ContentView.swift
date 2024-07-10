@@ -29,6 +29,7 @@ struct ContentView: View {
                     NavigationLink("Delivery details") {
                         AddressView(order: order)
                     }
+                    Text(order.streetAddress)
                 }
             }
             .navigationTitle("Cupcake Corner")
