@@ -50,4 +50,64 @@ I've skipped days 1-15 and started with [Day 16](https://www.hackingwithswift.co
 
 **Day 47**
 
-Challenge 4 - Habit tracking app
+[Challenge 4 - Habit tracking app](https://github.com/Taarna/100-days-of-swiftui/tree/main/13%20-%20Challenge%204/Habbiton)
+
+**Day 48**
+
+Inspiration day - no coding, just watching videos
+
+**Days 49 - 52**
+
+[Project 10 - CupcakeCorner](https://github.com/Taarna/100-days-of-swiftui/tree/main/14%20-%20Project%2010/CupcakeCorner)
+
+**Days 53 - 56**
+
+[Project 11 - Bookworm]()
+
+**Days 57 - 59**
+
+[Project 12 - SwiftData]()
+
+**Days 60 - 61**
+
+[Challenge 5 - Friendface]()
+
+**Days 62 - 67**
+
+[Project 13 - Instafilter]()
+
+**Days 68 - 73**
+
+[Project 14 - Bucket List]()
+
+**Days 74 - 76**
+
+[Project 15 - Accessibility]()
+
+**Days 77 - 78**
+
+[Challenge 6]()
+
+**Days 79 - 85**
+
+[Project 16]()
+
+**Days 86 - 91**
+
+[Project 17]()
+
+**Days 92 - 94**
+
+[Project 18]()
+
+**Days 95**
+
+[Challenge 7]()
+
+**Days 96-99**
+
+[Project 19]()
+
+**Day 100**
+
+Final Exam
