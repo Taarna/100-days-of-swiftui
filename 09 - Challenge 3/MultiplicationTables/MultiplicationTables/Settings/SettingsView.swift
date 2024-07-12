@@ -5,7 +5,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State var viewModel: SettingsViewModel
+    @State var viewModel: SettingsViewModel // TODO: Fix this, it should not be @State
     @State private var isGameActive = false
 
     var body: some View {
@@ -65,6 +65,7 @@ struct SettingsView: View {
                     }
                     .buttonStyle(SettingsButton(isSelected: false))
                     .navigationDestination(isPresented: $isGameActive) {
+                        // TODO: Fix this, Settings should not be responsible of opening the game
                         GameView(viewModel: GameViewModel(settings: viewModel.getSettings()), isGameActive: $isGameActive)
                     }
                 }

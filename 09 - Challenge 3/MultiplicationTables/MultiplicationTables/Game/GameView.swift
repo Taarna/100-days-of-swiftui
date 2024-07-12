@@ -5,7 +5,7 @@
 import SwiftUI
 
 struct GameView: View {
-    @State var viewModel: GameViewModel
+    @State var viewModel: GameViewModel // TODO: Fix this, it should not be @State
     @State private var isAlertPresented = false
     
     @Binding var isGameActive: Bool
