@@ -22,7 +22,13 @@ class Order: Codable {
     var extraFrosting = false
     var addSprinkles = false
     
-    var name = ""
+    var name = "" {
+        didSet {
+            if let encoded = try? JSONEncoder().encode(name) {
+                UserDefaults.standard.set(encoded, forKey: "name")
+            }
+        }
+    }
     var streetAddress = ""
     var city = ""
     var zip = ""
@@ -62,5 +68,15 @@ class Order: Codable {
         }
 
         return cost
+    }
+    
+    init() {
+        if let savedName = UserDefaults.standard.data(forKey: "name") {
+            if let decodedName = try? JSONDecoder().decode(String.self, from: savedName) {
+                name = decodedName
+            } else {
+                name = ""
+            }
+        }
     }
 }
