@@ -58,9 +58,9 @@
 				ED74E13B2C27611B003AB0E9 /* NavigationApp.swift */,
 				ED74E13D2C27611B003AB0E9 /* ContentView.swift */,
 				ED74E1492C2761DD003AB0E9 /* DetailView.swift */,
+				ED09EA902C295D6E0022FC8E /* PathStore.swift */,
 				ED74E13F2C27611D003AB0E9 /* Assets.xcassets */,
 				ED74E1412C27611D003AB0E9 /* Preview Content */,
-				ED09EA902C295D6E0022FC8E /* PathStore.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";

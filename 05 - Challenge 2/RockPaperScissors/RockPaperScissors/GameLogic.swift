@@ -1,3 +1,7 @@
+//
+//  Copyright (c) 2024 Ivana Rast. All rights reserved.
+//
+
 import Foundation
 
 enum Move: String, CaseIterable {

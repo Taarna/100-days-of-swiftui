@@ -1,6 +1,10 @@
 import SwiftUI
 
 @Observable
+//
+//  Copyright (c) 2024 Ivana Rast. All rights reserved.
+//
+
 class Order: Codable {
     enum CodingKeys: String, CodingKey {
         case _type = "type"

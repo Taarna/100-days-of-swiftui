@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2024 Taarna. All rights reserved.
+//  Copyright (c) 2024 Ivana Rast. All rights reserved.
 //
 
 import SwiftUI
