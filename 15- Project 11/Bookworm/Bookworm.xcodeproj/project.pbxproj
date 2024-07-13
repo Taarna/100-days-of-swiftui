@@ -15,6 +15,7 @@
 		8D06F5D02C417E2C00C3D9A0 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06F5CF2C417E2C00C3D9A0 /* AddBookView.swift */; };
 		8D06F5D22C41802400C3D9A0 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06F5D12C41802400C3D9A0 /* RatingView.swift */; };
 		8D06F5D42C41819200C3D9A0 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06F5D32C41819200C3D9A0 /* EmojiRatingView.swift */; };
+		8D06F5D62C4291F300C3D9A0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06F5D52C4291F300C3D9A0 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8D06F5CF2C417E2C00C3D9A0 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		8D06F5D12C41802400C3D9A0 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		8D06F5D32C41819200C3D9A0 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		8D06F5D52C4291F300C3D9A0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				8D06F5CF2C417E2C00C3D9A0 /* AddBookView.swift */,
 				8D06F5D32C41819200C3D9A0 /* EmojiRatingView.swift */,
 				8D06F5D12C41802400C3D9A0 /* RatingView.swift */,
+				8D06F5D52C4291F300C3D9A0 /* DetailView.swift */,
 				8D06F5C12C4172BE00C3D9A0 /* Assets.xcassets */,
 				8D06F5C32C4172BE00C3D9A0 /* Preview Content */,
 			);
@@ -152,6 +155,7 @@
 				8D06F5C02C4172BC00C3D9A0 /* ContentView.swift in Sources */,
 				8D06F5BE2C4172BC00C3D9A0 /* BookwormApp.swift in Sources */,
 				8D06F5CE2C417DCE00C3D9A0 /* Book.swift in Sources */,
+				8D06F5D62C4291F300C3D9A0 /* DetailView.swift in Sources */,
 				8D06F5D22C41802400C3D9A0 /* RatingView.swift in Sources */,
 				8D06F5D42C41819200C3D9A0 /* EmojiRatingView.swift in Sources */,
 				8D06F5D02C417E2C00C3D9A0 /* AddBookView.swift in Sources */,
