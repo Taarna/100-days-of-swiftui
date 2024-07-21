@@ -6,14 +6,13 @@ import SwiftUI
 
 struct AddView: View {
     @Environment(\.dismiss) var dismiss
+    @Environment(\.modelContext) var modelContext
     
     @State private var name = ""
     @State private var type = "Personal"
     @State private var amount = 0.0
     
     let types = ["Business", "Personal"]
-    
-    var expenses: Expenses
     
     var body: some View {
         NavigationStack {
@@ -35,12 +34,9 @@ struct AddView: View {
                 
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
-                        let item = ExpenseItem(name: name, type: type, amount: amount)
-                        if (type == "Personal") {
-                            expenses.privateItems.append(item)
-                        } else {
-                            expenses.businessItems.append(item)
-                        }
+                        let isPrivate = (type == "Personal")
+                        let newItem = ExpenseItem(name: name, type: type, amount: amount, isPrivate: isPrivate)
+                        modelContext.insert(newItem)
                         dismiss()
                     }
                 }
@@ -50,5 +46,5 @@ struct AddView: View {
 }
 
 #Preview {
-    AddView(expenses: Expenses())
+    AddView()
 }

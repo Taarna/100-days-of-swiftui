@@ -3,26 +3,34 @@
 //
 
 import Observation
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-    @State private var expenses = Expenses()
+    @Environment(\.modelContext) var modelContext
+    @Query(filter: #Predicate<ExpenseItem> { item in
+        item.isPrivate == true
+    }, sort: \ExpenseItem.amount) var privateItems: [ExpenseItem]
+    @Query(filter: #Predicate<ExpenseItem> { item in
+        item.isPrivate == false
+    }, sort: \ExpenseItem.amount) var businessItems: [ExpenseItem]
+    
     @State private var isAddExpensePresented = false
     
     var body: some View {
         NavigationStack {
             List {
                 Section("Private") {
-                    ForEach(expenses.privateItems) { item in
+                    ForEach(privateItems) { item in
                         ListRow(name: item.name, type: item.type, amount: item.amount)
                     }
-                    .onDelete(perform: removePrivateItems)
+//                    .onDelete(perform: removePrivateItems)
                 }
                 Section("Business") {
-                    ForEach(expenses.businessItems) { item in
+                    ForEach(businessItems) { item in
                         ListRow(name: item.name, type: item.type, amount: item.amount)
                     }
-                    .onDelete(perform: removeBusinessItems)
+//                    .onDelete(perform: removeBusinessItems)
                 }
             }
             .navigationTitle("iExpense")
@@ -32,18 +40,18 @@ struct ContentView: View {
                 }
             }
             .navigationDestination(isPresented: $isAddExpensePresented, destination: {
-                AddView(expenses: expenses)
+                AddView()
             })
         }
     }
     
-    private func removePrivateItems(at offsets: IndexSet) {
-        expenses.privateItems.remove(atOffsets: offsets)
-    }
-    
-    private func removeBusinessItems(at offsets: IndexSet) {
-        expenses.businessItems.remove(atOffsets: offsets)
-    }
+//    private func removePrivateItems(at offsets: IndexSet) {
+//        expenses.privateItems.remove(atOffsets: offsets)
+//    }
+//    
+//    private func removeBusinessItems(at offsets: IndexSet) {
+//        expenses.businessItems.remove(atOffsets: offsets)
+//    }
 }
 
 #Preview {
