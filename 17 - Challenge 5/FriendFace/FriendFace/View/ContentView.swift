@@ -8,16 +8,27 @@ struct ContentView: View {
     @State private var users = [User]()
     
     var body: some View {
-        List(users, id: \.id) { user in
-            VStack {
-                Text(user.name)
+        NavigationStack {
+            ScrollView {
+                LazyVStack {
+                    ForEach(users, id: \.id) { user in
+                        NavigationLink(value: user) {
+                            Text(user.name)
+                                .padding()
+                        }
+                    }
+                }
+                .padding()
+                .task {
+                    if (users.isEmpty) {
+                        await loadData()
+                    }
+                }
             }
-        }
-        .padding()
-        .task {
-            if (users.isEmpty) {
-                await loadData()
-            }
+            .navigationTitle("FriendFace")
+            .navigationDestination(for: User.self, destination: { user in
+                UserDetailsView(user: user)
+            })
         }
     }
     
