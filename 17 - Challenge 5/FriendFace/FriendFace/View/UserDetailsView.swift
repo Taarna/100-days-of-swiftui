@@ -13,5 +13,5 @@ struct UserDetailsView: View {
 }
 
 #Preview {
-    UserDetailsView(user: User(id: "gahjsgdhajg", isActive: true, name: "David"))
+    UserDetailsView(user: User(id: "gahjsgdhajg", isActive: true, name: "David", age: 34, company: "Disney"))
 }

@@ -9,26 +9,27 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVStack {
-                    ForEach(users, id: \.id) { user in
-                        NavigationLink(value: user) {
-                            Text(user.name)
-                                .padding()
+            VStack {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(users, id: \.id) { user in
+                            NavigationLink(value: user) {
+                                UserListRowView(name: user.name, age: user.age, company: user.company, isActive: user.isActive)
+                            }
+                        }
+                    }
+                    .padding()
+                    .task {
+                        if (users.isEmpty) {
+                            await loadData()
                         }
                     }
                 }
-                .padding()
-                .task {
-                    if (users.isEmpty) {
-                        await loadData()
-                    }
-                }
+                .navigationTitle("FriendFace")
+                .navigationDestination(for: User.self, destination: { user in
+                    UserDetailsView(user: user)
+                })
             }
-            .navigationTitle("FriendFace")
-            .navigationDestination(for: User.self, destination: { user in
-                UserDetailsView(user: user)
-            })
         }
     }
     

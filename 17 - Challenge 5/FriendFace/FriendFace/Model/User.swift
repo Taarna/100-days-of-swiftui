@@ -8,4 +8,6 @@ struct User: Codable, Hashable {
     var id: String
     var isActive: Bool
     var name: String
+    var age: Int
+    var company: String
 }
