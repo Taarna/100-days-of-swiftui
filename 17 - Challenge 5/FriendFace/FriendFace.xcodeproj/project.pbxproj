@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D8F36C42C5101DA0033B198 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F36C32C5101DA0033B198 /* Friend.swift */; };
+		8D8F36C62C5104290033B198 /* FriendListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F36C52C5104290033B198 /* FriendListRowView.swift */; };
 		8D9422312C50422C00FA365A /* FriendFaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9422302C50422C00FA365A /* FriendFaceApp.swift */; };
 		8D9422332C50422C00FA365A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9422322C50422C00FA365A /* ContentView.swift */; };
 		8D9422352C50422D00FA365A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D9422342C50422D00FA365A /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D8F36C32C5101DA0033B198 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		8D8F36C52C5104290033B198 /* FriendListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListRowView.swift; sourceTree = "<group>"; };
 		8D94222D2C50422C00FA365A /* FriendFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9422302C50422C00FA365A /* FriendFaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFaceApp.swift; sourceTree = "<group>"; };
 		8D9422322C50422C00FA365A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				8D94223F2C50430200FA365A /* User.swift */,
+				8D8F36C32C5101DA0033B198 /* Friend.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 				8D9422322C50422C00FA365A /* ContentView.swift */,
 				8DC4167C2C50DBB000CDD173 /* UserListRowView.swift */,
 				8DC4167A2C50D84D00CDD173 /* UserDetailsView.swift */,
+				8D8F36C52C5104290033B198 /* FriendListRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 				8D9422332C50422C00FA365A /* ContentView.swift in Sources */,
 				8D9422312C50422C00FA365A /* FriendFaceApp.swift in Sources */,
 				8D9422402C50430200FA365A /* User.swift in Sources */,
+				8D8F36C42C5101DA0033B198 /* Friend.swift in Sources */,
+				8D8F36C62C5104290033B198 /* FriendListRowView.swift in Sources */,
 				8DC4167B2C50D84D00CDD173 /* UserDetailsView.swift in Sources */,
 				8DC4167D2C50DBB000CDD173 /* UserListRowView.swift in Sources */,
 			);
