@@ -33,18 +33,18 @@ struct UserDetailsView: View {
 }
 
 #Preview {
-    let friends = [
-        Friend(id: "1-1", name: "Monica"),
-        Friend(id: "1-2", name: "Phoebe")
-    ]
-    let user = User(
-        id: "2-1",
-        about: "I like water sports",
-        age: 30,
-        company: "Unknown LLC",
-        friends: friends,
-        isActive: true,
-        name: "Chandler"
-    )
-    UserDetailsView(user: user)
+//    let friends = [
+//        Friend(id: "1-1", name: "Monica"),
+//        Friend(id: "1-2", name: "Phoebe")
+//    ]
+//    let user = User(
+//        id: "2-1",
+//        about: "I like water sports",
+//        age: 30,
+//        company: "Unknown LLC",
+//        friends: friends,
+//        isActive: true,
+//        name: "Chandler"
+//    )
+//    UserDetailsView(user: user)
 }
