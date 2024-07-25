@@ -2,10 +2,14 @@
 // Copyright (c) 2024 Ivana Rast. All rights reserved.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-    @State private var users = [User]()
+    @AppStorage("data-downloaded") private var dataDownloaded = false
+    
+    @Environment(\.modelContext) var modelContext
+    @Query(sort: \User.name) private var users: [User]
     
     var body: some View {
         NavigationStack {
@@ -20,8 +24,10 @@ struct ContentView: View {
                     }
                     .padding()
                     .task {
-                        if (users.isEmpty) {
-                            await loadData()
+                        if (!dataDownloaded) {
+                            await downloadData()
+                            dataDownloaded = true
+                            print("Data downloaded")
                         }
                     }
                 }
@@ -31,9 +37,15 @@ struct ContentView: View {
                 })
             }
         }
+        .onAppear {
+            print("Number of users: \(users.count)")
+            for user in users {
+                print(user.name)
+            }
+        }
     }
     
-    func loadData() async {
+    func downloadData() async {
         guard let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json") else {
             print("Invalid URL")
             return
@@ -42,7 +54,12 @@ struct ContentView: View {
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             if let decodedResponse = try? JSONDecoder().decode([User].self, from: data) {
-                users = decodedResponse
+                let users = decodedResponse
+                
+                for user in users {
+                    modelContext.insert(user)
+                }
+                print("Data saved")
             }
         } catch {
             print("Invalid data")
