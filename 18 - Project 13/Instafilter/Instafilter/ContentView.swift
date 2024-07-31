@@ -51,25 +51,9 @@ struct ContentView: View {
         let instantFilter = CIFilter.photoEffectTransfer()
         instantFilter.inputImage = beginImage
         
-        guard let instantOutput = instantFilter.outputImage else { return }
+        guard var instantOutput = instantFilter.outputImage else { return }
         
-        // Blend with the original image
-        let blendFilter = CIFilter.sourceAtopCompositing()
-        blendFilter.inputImage = instantOutput
-        blendFilter.backgroundImage = beginImage
-        
-        guard var blendedImage = blendFilter.outputImage else { return }
-        
-        // Apply the blend based on intensity
-        blendedImage = blendedImage.applyingFilter("CIColorMatrix", parameters: [
-            "inputRVector": CIVector(x: filterIntensity, y: 0, z: 0, w: 0),
-            "inputGVector": CIVector(x: 0, y: filterIntensity, z: 0, w: 0),
-            "inputBVector": CIVector(x: 0, y: 0, z: filterIntensity, w: 0),
-            "inputAVector": CIVector(x: 0, y: 0, z: 0, w: 1),
-            "inputBiasVector": CIVector(x: 0, y: 0, z: 0, w: 0)
-        ])
-        
-        guard let cgImage = context.createCGImage(blendedImage, from: blendedImage.extent) else { return }
+        guard let cgImage = context.createCGImage(instantOutput, from: instantOutput.extent) else { return }
         
         let uiImage = UIImage(cgImage: cgImage)
         image = Image(uiImage: uiImage)
