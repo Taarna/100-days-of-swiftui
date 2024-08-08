@@ -12,6 +12,7 @@
 		8D8A99342C64C08C0059AF00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8A99332C64C08C0059AF00 /* Assets.xcassets */; };
 		8D8A99372C64C08C0059AF00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8A99362C64C08C0059AF00 /* Preview Assets.xcassets */; };
 		8D8A99402C64C40A0059AF00 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8A993F2C64C40A0059AF00 /* Location.swift */; };
+		8DDB04452C65019D00840A06 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB04442C65019D00840A06 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8D8A99332C64C08C0059AF00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D8A99362C64C08C0059AF00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8D8A993F2C64C40A0059AF00 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		8DDB04442C65019D00840A06 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				8D8A992F2C64C08B0059AF00 /* MapTestApp.swift */,
 				8D8A99312C64C08B0059AF00 /* ContentView.swift */,
+				8DDB04442C65019D00840A06 /* EditView.swift */,
 				8D8A993F2C64C40A0059AF00 /* Location.swift */,
 				8D8A99332C64C08C0059AF00 /* Assets.xcassets */,
 				8D8A99352C64C08C0059AF00 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				8D8A99322C64C08B0059AF00 /* ContentView.swift in Sources */,
 				8D8A99402C64C40A0059AF00 /* Location.swift in Sources */,
+				8DDB04452C65019D00840A06 /* EditView.swift in Sources */,
 				8D8A99302C64C08B0059AF00 /* MapTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +280,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MapTest/Preview Content\"";
+				DEVELOPMENT_TEAM = 4NWPMFBC59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
@@ -284,6 +289,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MapTest/Preview Content\"";
+				DEVELOPMENT_TEAM = 4NWPMFBC59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
@@ -313,6 +320,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
