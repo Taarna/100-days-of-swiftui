@@ -15,7 +15,16 @@ extension ContentView {
         
         private(set) var locations: [Location]
         var selectedLocation: Location?
-        var isUnlocked = false
+        private(set) var isUnlocked = false
+        
+        var mapType = 0
+        var selectedMapStyle: MapStyle {
+            return switch(mapType) {
+                case 0: .standard
+                case 1: .hybrid
+                default: .standard
+            }
+        }
         
         init() {
             do {
