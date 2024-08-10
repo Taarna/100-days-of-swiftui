@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D33F56B2C679808007BAF14 /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33F56A2C679808007BAF14 /* EditView-ViewModel.swift */; };
 		8D35350A2C6645910004F924 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3535092C6645910004F924 /* Result.swift */; };
 		8D8A99302C64C08B0059AF00 /* MapTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8A992F2C64C08B0059AF00 /* MapTestApp.swift */; };
 		8D8A99322C64C08B0059AF00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8A99312C64C08B0059AF00 /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D33F56A2C679808007BAF14 /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView-ViewModel.swift"; sourceTree = "<group>"; };
 		8D3535092C6645910004F924 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		8D8A992C2C64C08B0059AF00 /* MapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8A992F2C64C08B0059AF00 /* MapTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTestApp.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				8D8A99312C64C08B0059AF00 /* ContentView.swift */,
 				8DE40F562C66780C008941C8 /* ContentView-ViewModel.swift */,
 				8DDB04442C65019D00840A06 /* EditView.swift */,
+				8D33F56A2C679808007BAF14 /* EditView-ViewModel.swift */,
 				8D8A993F2C64C40A0059AF00 /* Location.swift */,
 				8D3535092C6645910004F924 /* Result.swift */,
 				8D8A99332C64C08C0059AF00 /* Assets.xcassets */,
@@ -152,6 +155,7 @@
 				8D8A99322C64C08B0059AF00 /* ContentView.swift in Sources */,
 				8DE40F572C66780C008941C8 /* ContentView-ViewModel.swift in Sources */,
 				8D35350A2C6645910004F924 /* Result.swift in Sources */,
+				8D33F56B2C679808007BAF14 /* EditView-ViewModel.swift in Sources */,
 				8D8A99402C64C40A0059AF00 /* Location.swift in Sources */,
 				8DDB04452C65019D00840A06 /* EditView.swift in Sources */,
 				8D8A99302C64C08B0059AF00 /* MapTestApp.swift in Sources */,
