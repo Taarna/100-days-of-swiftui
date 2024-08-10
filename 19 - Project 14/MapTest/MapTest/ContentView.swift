@@ -57,11 +57,16 @@ struct ContentView: View {
             }
             .pickerStyle(.menu)
         } else {
-            Button("Unlock Places", action: viewModel.authenticate)
-                .padding()
-                .background(.blue)
-                .foregroundStyle(.white)
-                .clipShape(.capsule)
+            VStack {
+                Button("Unlock Places", action: viewModel.authenticate)
+                    .padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .clipShape(.capsule)
+            }
+            .alert("Authentication Failed", isPresented: $viewModel.authenticationFailed) {
+                Button("OK") { }
+            }
         }
     }
 }

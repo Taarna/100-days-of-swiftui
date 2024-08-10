@@ -16,6 +16,7 @@ extension ContentView {
         private(set) var locations: [Location]
         var selectedLocation: Location?
         private(set) var isUnlocked = false
+        var authenticationFailed = false
         
         var mapType = 0
         var selectedMapStyle: MapStyle {
@@ -67,15 +68,14 @@ extension ContentView {
                 let reason = "Please authenticate yourself to unlock your places."
 
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-
                     if success {
                         self.isUnlocked = true
                     } else {
-                        // error
+                        self.authenticationFailed = true
                     }
                 }
             } else {
-                // no biometrics
+                self.authenticationFailed = true
             }
         }
     }
