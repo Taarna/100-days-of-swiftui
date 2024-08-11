@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DD70E102C68E08B003D4F94 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD70E0F2C68E08B003D4F94 /* ContentView-ViewModel.swift */; };
 		ED39BBC92C05343E0061F212 /* GuessTheFlagApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39BBC82C05343E0061F212 /* GuessTheFlagApp.swift */; };
 		ED39BBCB2C05343E0061F212 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39BBCA2C05343E0061F212 /* ContentView.swift */; };
 		ED39BBCD2C0534420061F212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED39BBCC2C0534420061F212 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8DD70E0F2C68E08B003D4F94 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 		ED39BBC52C05343E0061F212 /* GuessTheFlag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheFlag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED39BBC82C05343E0061F212 /* GuessTheFlagApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagApp.swift; sourceTree = "<group>"; };
 		ED39BBCA2C05343E0061F212 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				ED39BBC82C05343E0061F212 /* GuessTheFlagApp.swift */,
 				EDA349A32C105EC8009BEE9A /* FlagView.swift */,
 				ED39BBCA2C05343E0061F212 /* ContentView.swift */,
+				8DD70E0F2C68E08B003D4F94 /* ContentView-ViewModel.swift */,
 				ED39BBCC2C0534420061F212 /* Assets.xcassets */,
 				ED39BBCE2C0534420061F212 /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				ED39BBCB2C05343E0061F212 /* ContentView.swift in Sources */,
 				EDA349A42C105EC8009BEE9A /* FlagView.swift in Sources */,
+				8DD70E102C68E08B003D4F94 /* ContentView-ViewModel.swift in Sources */,
 				ED39BBC92C05343E0061F212 /* GuessTheFlagApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +280,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessTheFlag/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4NWPMFBC59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -284,6 +288,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessTheFlag/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4NWPMFBC59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -313,6 +318,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -5,18 +5,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var scoreTitle = ""
-    @State private var score = 0
-    @State private var numberOfTries = 8
-    
-    @State private var showingScore = false
-    @State private var showingGameFinished = false
-    
-    @State var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"].shuffled()
-    @State var correctAnswer = Int.random(in: 0...2)
+    @State private var viewModel = ViewModel()
     
     @State private var animationRotation = 0.0
-    @State private var selectedIndex = -1
+    
     @State private var buttonOpacity = 1.0
     @State private var scaleFactor = 1.0
     
@@ -38,23 +30,22 @@ struct ContentView: View {
                         Text("Tap the flag of")
                             .foregroundStyle(.secondary)
                             .font(.subheadline.weight(.heavy))
-                        Text(countries[correctAnswer])
+                        Text(viewModel.getCorrectCountry())
                             .font(.largeTitle.weight(.semibold))
                     }
                     ForEach(0..<3) { number in
-                        Button {
-                            flagTapped(number)
-                            withAnimation {
-                                animationRotation += 360
-                                buttonOpacity = 0.25
-                                scaleFactor = 0.8
-                            }
-                        } label: {
-                            FlagView(flagImage: countries[number])
+                        let country = viewModel.countries[number]
+                        let label = viewModel.labels[country] ?? ""
+                        FlagView(flagImage: country, accessibilityLabel: label) {
+                            viewModel.flagTapped(number)
+                        } animation: {
+                            animationRotation += 360
+                            buttonOpacity = 0.25
+                            scaleFactor = 0.8
                         }
-                        .rotation3DEffect(.degrees(selectedIndex == number ? animationRotation : 0), axis: (x: 0, y: 1, z: 0))
-                        .opacity(selectedIndex == number ? 1.0 : buttonOpacity)
-                        .scaleEffect(selectedIndex == number ? 1.0 : scaleFactor)
+                        .rotation3DEffect(.degrees(viewModel.selectedIndex == number ? animationRotation : 0), axis: (x: 0, y: 1, z: 0))
+                        .opacity(viewModel.selectedIndex == number ? 1.0 : buttonOpacity)
+                        .scaleEffect(viewModel.selectedIndex == number ? 1.0 : scaleFactor)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -64,74 +55,31 @@ struct ContentView: View {
                 
                 Spacer()
                 Spacer()
-                Text("Score: \(score)")
+                Text("Score: \(viewModel.score)")
                     .foregroundStyle(.white)
                     .font(.title.bold())
-                Text("Tries left: \(numberOfTries)")
+                Text("Tries left: \(viewModel.numberOfTries)")
                     .foregroundStyle(.white)
                     .font(.title)
                 Spacer()
             }
             .padding()
         }
-        .alert(scoreTitle, isPresented: $showingScore) {
-            Button("Continue", action: askQuestion)
+        .alert(viewModel.scoreTitle, isPresented: $viewModel.showingScore) {
+            Button("Continue", action: {
+                viewModel.askQuestion()
+                buttonOpacity = 1.0
+                scaleFactor = 1.0
+            })
         } message: {
-            Text("Your score is \(score)")
+            Text("Your score is \(viewModel.score)")
         }
-        .alert("Game finished!", isPresented: $showingGameFinished) {
-            Button("Reset", action: resetGame)
+        .alert("Game finished!", isPresented: $viewModel.showingGameFinished) {
+            Button("Reset", action: viewModel.resetGame)
         } message: {
-            Text("Your score is \(score)")
+            Text("Your score is \(viewModel.score)")
         }
     }
-    
-    func flagTapped(_ number: Int) {
-        numberOfTries -= 1
-        
-        if number == correctAnswer {
-            increaseScore()
-            scoreTitle = "Correct"
-        } else {
-            reduceScore()
-            let selectedCountry = countries[number]
-            scoreTitle = "Wrong! That’s the flag of \(selectedCountry)"
-        }
-        
-        selectedIndex = number
-        
-        showingScore = true
-    }
-    
-    private func reduceScore() {
-        if score > 0 {
-            score -= 1
-        }
-    }
-    
-    private func increaseScore() {
-        score += 1
-    }
-    
-    func askQuestion() {
-        countries.shuffle()
-        correctAnswer = Int.random(in: 0..<3)
-        
-        if (numberOfTries == 0) {
-            showingGameFinished = true
-        }
-        
-        selectedIndex = -1
-        buttonOpacity = 1.0
-        scaleFactor = 1.0
-    }
-    
-    private func resetGame() {
-        score = 0
-        numberOfTries = 8
-        scoreTitle = ""
-    }
-    
 }
 
 #Preview {
