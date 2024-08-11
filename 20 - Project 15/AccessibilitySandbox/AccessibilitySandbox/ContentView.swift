@@ -9,27 +9,34 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Value: \(value)")
-            
-            Button("Increment") {
-                value += 1
+            Button("John Fitzgerald Kennedy") {
+                print("Button tapped")
             }
+            .accessibilityInputLabels(["John Fitzgerald Kennedy", "Kennedy", "JFK"])
             
-            Button("Decrement") {
-                value -= 1
+            VStack {
+                Text("Value: \(value)")
+                
+                Button("Increment") {
+                    value += 1
+                }
+                
+                Button("Decrement") {
+                    value -= 1
+                }
             }
-        }
-        .accessibilityElement()
-        .accessibilityLabel("Value")
-        .accessibilityValue(String(value))
-        .accessibilityAdjustableAction { direction in
-            switch direction {
-            case .increment:
-                value += 1
-            case .decrement:
-                value -= 1
-            default:
-                print("Not handled.")
+            .accessibilityElement()
+            .accessibilityLabel("Value")
+            .accessibilityValue(String(value))
+            .accessibilityAdjustableAction { direction in
+                switch direction {
+                case .increment:
+                    value += 1
+                case .decrement:
+                    value -= 1
+                default:
+                    print("Not handled.")
+                }
             }
         }
     }
