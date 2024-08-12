@@ -62,27 +62,27 @@ Inspiration day - no coding, just watching videos
 
 **Days 53 - 56**
 
-[Project 11 - Bookworm]()
+[Project 11 - Bookworm](https://github.com/Taarna/100-days-of-swiftui/tree/main/15-%20Project%2011/Bookworm)
 
 **Days 57 - 59**
 
-[Project 12 - SwiftData]()
+[Project 12 - SwiftData](https://github.com/Taarna/100-days-of-swiftui/tree/main/16%20-%20Project%2012/SwiftDataProject)
 
 **Days 60 - 61**
 
-[Challenge 5 - Friendface]()
+[Challenge 5 - Friendface](https://github.com/Taarna/100-days-of-swiftui/tree/main/17%20-%20Challenge%205)
 
 **Days 62 - 67**
 
-[Project 13 - Instafilter]()
+[Project 13 - Instafilter](https://github.com/Taarna/100-days-of-swiftui/tree/main/18%20-%20Project%2013)
 
 **Days 68 - 73**
 
-[Project 14 - Bucket List]()
+[Project 14 - Bucket List](https://github.com/Taarna/100-days-of-swiftui/tree/main/19%20-%20Project%2014)
 
 **Days 74 - 76**
 
-[Project 15 - Accessibility]()
+[Project 15 - Accessibility](https://github.com/Taarna/100-days-of-swiftui/tree/main/20%20-%20Project%2015)
 
 **Days 77 - 78**
 
