@@ -34,9 +34,9 @@ struct ListRow: View {
             default:
                 Text(formattedAmount)
             }
-            
-                
         }
+        .accessibilityLabel("\(name), \(amount)")
+        .accessibilityHint(type)
     }
 }
 
