@@ -63,6 +63,8 @@ struct ContentView: View {
                         Image(systemName: "\(usedWord.count).circle")
                         Text(usedWord)
                     }
+                    .accessibilityElement()
+                    .accessibilityLabel("\(usedWord), \(usedWord.count) letters")
                     .padding(5)
                 }
             }
