@@ -32,6 +32,7 @@ struct ContentView: View {
                 }, label: {
                     Image(systemName: toolbarIcon)
                 })
+                .accessibilityHint("Changes the layout of missions")
             }
         }
     }
