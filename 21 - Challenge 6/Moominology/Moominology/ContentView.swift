@@ -2,14 +2,12 @@
 // Copyright (c) 2024 Ivana Rast. All rights reserved.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-    @State private var characters = [
-        "Moomin",
-        "Moominpapa",
-        "Little My"
-    ]
+    @Environment(\.modelContext) var modelContext
+    @Query(sort: \Character.name) var characters: [Character]
     
     @State private var isEditSheetPresented = false
     
@@ -18,7 +16,16 @@ struct ContentView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(characters, id:\.self) { character in
-                        Text(character)
+                        HStack {
+                            if let uiImage = UIImage(data: character.photo) {
+                                let image = Image(uiImage: uiImage)
+                                image
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                            }
+                            Text(character.name)
+                            Spacer()
+                        }
                     }
                 }
                 .toolbar {
