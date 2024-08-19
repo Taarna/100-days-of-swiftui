@@ -2,7 +2,6 @@
 // Copyright (c) 2024 Ivana Rast. All rights reserved.
 //
 
-import PhotosUI
 import SwiftUI
 
 struct ContentView: View {
@@ -11,8 +10,8 @@ struct ContentView: View {
         "Moominpapa",
         "Little My"
     ]
-    @State private var selectedPhoto: PhotosPickerItem?
-    @State private var processedPhoto: Image?
+    
+    @State private var isEditSheetPresented = false
     
     var body: some View {
         NavigationStack {
@@ -20,29 +19,17 @@ struct ContentView: View {
                 LazyVStack {
                     ForEach(characters, id:\.self) { character in
                         Text(character)
-                        PhotosPicker(selection: $selectedPhoto) {
-                            if let processedPhoto {
-                                processedPhoto
-                                    .resizable()
-                                    .scaledToFit()
-                            }
-                        }
                     }
                 }
                 .toolbar {
                     Button("Add", systemImage: "plus") {
-                        loadImage()
+                        isEditSheetPresented = true
                     }
                 }
+                .sheet(isPresented: $isEditSheetPresented) {
+                    AddView()
+                }
             }
-        }
-    }
-    
-    private func loadImage() {
-        Task {
-            guard let imageData = try await selectedPhoto?.loadTransferable(type: Data.self) else { return }
-            guard let inputImage = UIImage(data: imageData) else { return }
-            processedPhoto = Image(uiImage: inputImage)
         }
     }
 }
