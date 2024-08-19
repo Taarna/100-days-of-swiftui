@@ -7,7 +7,9 @@ import SwiftUI
 
 struct AddView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) var modelContext
     
+    @State private var selectedPhotoData: Data?
     @State private var selectedPhoto: PhotosPickerItem?
     @State private var processedPhoto: Image?
     @State private var name = ""
@@ -17,6 +19,10 @@ struct AddView: View {
             HStack {
                 Spacer()
                 Button("Save") {
+                    if let photoData = selectedPhotoData {
+                        let character = Character(name: name, photo: photoData)
+                        modelContext.insert(character)
+                    }
                     dismiss()
                 }
                 .disabled(name.isEmpty || selectedPhoto == nil)
@@ -53,6 +59,7 @@ struct AddView: View {
             guard let imageData = try await selectedPhoto?.loadTransferable(type: Data.self) else { return }
             guard let inputImage = UIImage(data: imageData) else { return }
             processedPhoto = Image(uiImage: inputImage)
+            selectedPhotoData = imageData
         }
     }
 }
