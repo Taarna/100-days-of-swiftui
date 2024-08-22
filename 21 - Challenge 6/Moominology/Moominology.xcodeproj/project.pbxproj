@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EDE4B0362C03E34300E32914 /* WeSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE4B0352C03E34300E32914 /* WeSplitApp.swift */; };
-		EDE4B0382C03E34300E32914 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE4B0372C03E34300E32914 /* ContentView.swift */; };
-		EDE4B03A2C03E34500E32914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE4B0392C03E34500E32914 /* Assets.xcassets */; };
-		EDE4B03D2C03E34500E32914 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE4B03C2C03E34500E32914 /* Preview Assets.xcassets */; };
+		8D4544B42C70CF8A006AE933 /* MoominologyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4544B32C70CF8A006AE933 /* MoominologyApp.swift */; };
+		8D4544B62C70CF8A006AE933 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4544B52C70CF8A006AE933 /* ContentView.swift */; };
+		8D4544B82C70CF8A006AE933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D4544B72C70CF8A006AE933 /* Assets.xcassets */; };
+		8D4544BB2C70CF8A006AE933 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D4544BA2C70CF8A006AE933 /* Preview Assets.xcassets */; };
+		8DDA7B8F2C7360F300EA581F /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDA7B8E2C7360F300EA581F /* AddView.swift */; };
+		8DDA7B912C7370BF00EA581F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDA7B902C7370BF00EA581F /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EDE4B0322C03E34300E32914 /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDE4B0352C03E34300E32914 /* WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitApp.swift; sourceTree = "<group>"; };
-		EDE4B0372C03E34300E32914 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EDE4B0392C03E34500E32914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EDE4B03C2C03E34500E32914 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8D4544B02C70CF8A006AE933 /* Moominology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moominology.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D4544B32C70CF8A006AE933 /* MoominologyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoominologyApp.swift; sourceTree = "<group>"; };
+		8D4544B52C70CF8A006AE933 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8D4544B72C70CF8A006AE933 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D4544BA2C70CF8A006AE933 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8DDA7B8E2C7360F300EA581F /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		8DDA7B902C7370BF00EA581F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EDE4B02F2C03E34300E32914 /* Frameworks */ = {
+		8D4544AD2C70CF8A006AE933 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,37 +36,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EDE4B0292C03E34300E32914 = {
+		8D4544A72C70CF8A006AE933 = {
 			isa = PBXGroup;
 			children = (
-				EDE4B0342C03E34300E32914 /* WeSplit */,
-				EDE4B0332C03E34300E32914 /* Products */,
+				8D4544B22C70CF8A006AE933 /* Moominology */,
+				8D4544B12C70CF8A006AE933 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EDE4B0332C03E34300E32914 /* Products */ = {
+		8D4544B12C70CF8A006AE933 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDE4B0322C03E34300E32914 /* WeSplit.app */,
+				8D4544B02C70CF8A006AE933 /* Moominology.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EDE4B0342C03E34300E32914 /* WeSplit */ = {
+		8D4544B22C70CF8A006AE933 /* Moominology */ = {
 			isa = PBXGroup;
 			children = (
-				EDE4B0352C03E34300E32914 /* WeSplitApp.swift */,
-				EDE4B0372C03E34300E32914 /* ContentView.swift */,
-				EDE4B0392C03E34500E32914 /* Assets.xcassets */,
-				EDE4B03B2C03E34500E32914 /* Preview Content */,
+				8D4544B32C70CF8A006AE933 /* MoominologyApp.swift */,
+				8D4544B52C70CF8A006AE933 /* ContentView.swift */,
+				8DDA7B8E2C7360F300EA581F /* AddView.swift */,
+				8DDA7B902C7370BF00EA581F /* Character.swift */,
+				8D4544B72C70CF8A006AE933 /* Assets.xcassets */,
+				8D4544B92C70CF8A006AE933 /* Preview Content */,
 			);
-			path = WeSplit;
+			path = Moominology;
 			sourceTree = "<group>";
 		};
-		EDE4B03B2C03E34500E32914 /* Preview Content */ = {
+		8D4544B92C70CF8A006AE933 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				EDE4B03C2C03E34500E32914 /* Preview Assets.xcassets */,
+				8D4544BA2C70CF8A006AE933 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -70,39 +76,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EDE4B0312C03E34300E32914 /* WeSplit */ = {
+		8D4544AF2C70CF8A006AE933 /* Moominology */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDE4B0402C03E34500E32914 /* Build configuration list for PBXNativeTarget "WeSplit" */;
+			buildConfigurationList = 8D4544BE2C70CF8A006AE933 /* Build configuration list for PBXNativeTarget "Moominology" */;
 			buildPhases = (
-				EDE4B02E2C03E34300E32914 /* Sources */,
-				EDE4B02F2C03E34300E32914 /* Frameworks */,
-				EDE4B0302C03E34300E32914 /* Resources */,
+				8D4544AC2C70CF8A006AE933 /* Sources */,
+				8D4544AD2C70CF8A006AE933 /* Frameworks */,
+				8D4544AE2C70CF8A006AE933 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WeSplit;
-			productName = WeSplit;
-			productReference = EDE4B0322C03E34300E32914 /* WeSplit.app */;
+			name = Moominology;
+			productName = Moominology;
+			productReference = 8D4544B02C70CF8A006AE933 /* Moominology.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EDE4B02A2C03E34300E32914 /* Project object */ = {
+		8D4544A82C70CF8A006AE933 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					EDE4B0312C03E34300E32914 = {
-						CreatedOnToolsVersion = 15.2;
+					8D4544AF2C70CF8A006AE933 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = EDE4B02D2C03E34300E32914 /* Build configuration list for PBXProject "WeSplit" */;
+			buildConfigurationList = 8D4544AB2C70CF8A006AE933 /* Build configuration list for PBXProject "Moominology" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +116,44 @@
 				en,
 				Base,
 			);
-			mainGroup = EDE4B0292C03E34300E32914;
-			productRefGroup = EDE4B0332C03E34300E32914 /* Products */;
+			mainGroup = 8D4544A72C70CF8A006AE933;
+			productRefGroup = 8D4544B12C70CF8A006AE933 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EDE4B0312C03E34300E32914 /* WeSplit */,
+				8D4544AF2C70CF8A006AE933 /* Moominology */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EDE4B0302C03E34300E32914 /* Resources */ = {
+		8D4544AE2C70CF8A006AE933 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE4B03D2C03E34500E32914 /* Preview Assets.xcassets in Resources */,
-				EDE4B03A2C03E34500E32914 /* Assets.xcassets in Resources */,
+				8D4544BB2C70CF8A006AE933 /* Preview Assets.xcassets in Resources */,
+				8D4544B82C70CF8A006AE933 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EDE4B02E2C03E34300E32914 /* Sources */ = {
+		8D4544AC2C70CF8A006AE933 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE4B0382C03E34300E32914 /* ContentView.swift in Sources */,
-				EDE4B0362C03E34300E32914 /* WeSplitApp.swift in Sources */,
+				8D4544B62C70CF8A006AE933 /* ContentView.swift in Sources */,
+				8D4544B42C70CF8A006AE933 /* MoominologyApp.swift in Sources */,
+				8DDA7B8F2C7360F300EA581F /* AddView.swift in Sources */,
+				8DDA7B912C7370BF00EA581F /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EDE4B03E2C03E34500E32914 /* Debug */ = {
+		8D4544BC2C70CF8A006AE933 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -197,7 +205,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -208,7 +216,7 @@
 			};
 			name = Debug;
 		};
-		EDE4B03F2C03E34500E32914 /* Release */ = {
+		8D4544BD2C70CF8A006AE933 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -254,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -264,14 +272,14 @@
 			};
 			name = Release;
 		};
-		EDE4B0412C03E34500E32914 /* Debug */ = {
+		8D4544BF2C70CF8A006AE933 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeSplit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Moominology/Preview Content\"";
 				DEVELOPMENT_TEAM = 4NWPMFBC59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -288,20 +296,23 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taarna.wesplit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		EDE4B0422C03E34500E32914 /* Release */ = {
+		8D4544C02C70CF8A006AE933 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeSplit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Moominology/Preview Content\"";
 				DEVELOPMENT_TEAM = 4NWPMFBC59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -318,6 +329,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taarna.wesplit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -327,25 +341,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EDE4B02D2C03E34300E32914 /* Build configuration list for PBXProject "WeSplit" */ = {
+		8D4544AB2C70CF8A006AE933 /* Build configuration list for PBXProject "Moominology" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EDE4B03E2C03E34500E32914 /* Debug */,
-				EDE4B03F2C03E34500E32914 /* Release */,
+				8D4544BC2C70CF8A006AE933 /* Debug */,
+				8D4544BD2C70CF8A006AE933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDE4B0402C03E34500E32914 /* Build configuration list for PBXNativeTarget "WeSplit" */ = {
+		8D4544BE2C70CF8A006AE933 /* Build configuration list for PBXNativeTarget "Moominology" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EDE4B0412C03E34500E32914 /* Debug */,
-				EDE4B0422C03E34500E32914 /* Release */,
+				8D4544BF2C70CF8A006AE933 /* Debug */,
+				8D4544C02C70CF8A006AE933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EDE4B02A2C03E34300E32914 /* Project object */;
+	rootObject = 8D4544A82C70CF8A006AE933 /* Project object */;
 }
