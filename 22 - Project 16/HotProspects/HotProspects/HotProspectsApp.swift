@@ -2,6 +2,7 @@
 // Copyright (c) 2024 Ivana Rast. All rights reserved.
 //
 
+import SwiftData
 import SwiftUI
 
 @main
@@ -10,5 +11,6 @@ struct HotProspectsApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Prospect.self)
     }
 }
