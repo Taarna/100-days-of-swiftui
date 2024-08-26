@@ -46,16 +46,18 @@ struct ProspectsView: View {
     var body: some View {
         NavigationStack {
             List(prospects, selection: $selectedProspects) { prospect in
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(prospect.name)
-                            .font(.headline)
-                        Text(prospect.emailAddress)
-                            .foregroundStyle(.secondary)
-                    }
-                    Spacer()
-                    if prospect.isContacted {
-                        Image(systemName: "person.crop.circle.fill.badge.checkmark")
+                NavigationLink(destination: EditProspectView(prospect: prospect)) {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(prospect.name)
+                                .font(.headline)
+                            Text(prospect.emailAddress)
+                                .foregroundStyle(.secondary)
+                        }
+                        Spacer()
+                        if prospect.isContacted {
+                            Image(systemName: "person.crop.circle.fill.badge.checkmark")
+                        }
                     }
                 }
                 .swipeActions {
