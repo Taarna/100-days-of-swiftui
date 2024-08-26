@@ -31,6 +31,8 @@ struct EditProspectView: View {
             Button("Save", action: {
                 dismiss()
             })
+            
+            Spacer()
         }
     }
 }

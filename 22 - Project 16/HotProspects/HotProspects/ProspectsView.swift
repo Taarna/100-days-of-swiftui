@@ -12,7 +12,12 @@ enum FilterType {
 }
 
 struct ProspectsView: View {
-    @Query(sort: \Prospect.name) var prospects: [Prospect]
+    @State private var sortOrder = [
+        SortDescriptor(\Prospect.name),
+        SortDescriptor(\Prospect.createdAt),
+    ]
+    @Query var prospects: [Prospect]
+    
     @Environment(\.modelContext) var modelContext
     
     @State private var isShowingScanner = false
@@ -39,13 +44,15 @@ struct ProspectsView: View {
             
             _prospects = Query(filter: #Predicate {
                 $0.isContacted == showContactedOnly
-            }, sort: [SortDescriptor(\Prospect.name)])
+            })
+        } else {
+            _prospects = Query()
         }
     }
     
     var body: some View {
         NavigationStack {
-            List(prospects, selection: $selectedProspects) { prospect in
+            List(prospects.sorted(using: sortOrder), selection: $selectedProspects) { prospect in
                 NavigationLink(destination: EditProspectView(prospect: prospect)) {
                     HStack {
                         VStack(alignment: .leading) {
@@ -53,6 +60,7 @@ struct ProspectsView: View {
                                 .font(.headline)
                             Text(prospect.emailAddress)
                                 .foregroundStyle(.secondary)
+                            Text(prospect.createdAt.formatted())
                         }
                         Spacer()
                         if prospect.isContacted {
@@ -89,6 +97,23 @@ struct ProspectsView: View {
                         isShowingScanner = true
                     }
                 }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu("Sort", systemImage: "arrow.up.arrow.down") {
+                        Picker("Sort", selection: $sortOrder) {
+                            Text("Sort by Name")
+                                .tag([
+                                    SortDescriptor(\Prospect.name),
+                                    SortDescriptor(\Prospect.createdAt),
+                                ])
+                            
+                            Text("Sort by Join Date")
+                                .tag([
+                                    SortDescriptor(\Prospect.createdAt),
+                                    SortDescriptor(\Prospect.name)
+                                ])
+                        }
+                    }
+                }
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
                 }
@@ -112,7 +137,7 @@ struct ProspectsView: View {
             let details = result.string.components(separatedBy: "\n")
             guard details.count == 2 else { return }
             
-            let person = Prospect(name: details[0], emailAddress: details[1], isContacted: false)
+            let person = Prospect(name: details[0], emailAddress: details[1], isContacted: false, createdAt: Date.now.addingTimeInterval(TimeInterval(86400 * Int.random(in: 10...20))))
             
             modelContext.insert(person)
         case .failure(let error):
