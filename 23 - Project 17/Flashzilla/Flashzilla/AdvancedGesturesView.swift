@@ -66,8 +66,7 @@ struct AdvancedGesturesView: View {
             .foregroundColor(.black)
             .padding()
             .background(
-                RoundedRectangle(cornerRadius: 5)
-                    .fill(longPressBackgroundColor))
+                RoundedRectangle(cornerRadius: 5).fill(Color.pink.opacity(0.2)))
             .rotationEffect(rotationAngle)
             .gesture(
                 RotateGesture()
