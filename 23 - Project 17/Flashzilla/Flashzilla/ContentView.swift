@@ -14,6 +14,15 @@ struct ContentView: View {
                 NavigationLink("Advanced Gestures") {
                     AdvancedGesturesView()
                 }
+                NavigationLink("Timer") {
+                    TimerView()
+                }
+                NavigationLink("Scenes") {
+                    SceneView()
+                }
+                NavigationLink("Accessibility") {
+                    AccessibilityView()
+                }
             }
         }
     }
