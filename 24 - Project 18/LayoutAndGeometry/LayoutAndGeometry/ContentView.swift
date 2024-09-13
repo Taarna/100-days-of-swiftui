@@ -15,13 +15,10 @@ struct ContentView: View {
                         Text("Row #\(index)")
                             .font(.title)
                             .frame(maxWidth: .infinity)
-                            .background(Color(hue: min(proxy.frame(in: .global).minY/fullView.size.height, 1), saturation: 1, brightness: 1))
+                            .background(Color(hue: min(proxy.frame(in: .global).minY/fullView.size.height, 1), saturation: 0.5, brightness: 1))
                             .rotation3DEffect(.degrees(proxy.frame(in: .global).minY - fullView.size.height / 2) / 5, axis: (x: 0, y: 1, z: 0))
-                            .visualEffect { content, geometryProxy in
-                                content
-                                    .opacity(geometryProxy.frame(in: .global).origin.y / 200)
-                                    .scaleEffect(0.3 + geometryProxy.frame(in: .global).minY / fullView.size.height)
-                            }
+                            .opacity(proxy.frame(in: .global).origin.y / 200)
+                            .scaleEffect(0.3 + proxy.frame(in: .global).minY / fullView.size.height)
                     }
                     .frame(height: 40)
                 }
