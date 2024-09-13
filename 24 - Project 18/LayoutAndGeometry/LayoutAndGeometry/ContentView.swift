@@ -20,6 +20,7 @@ struct ContentView: View {
                             .visualEffect { content, geometryProxy in
                                 content
                                     .opacity(geometryProxy.frame(in: .global).origin.y / 200)
+                                    .scaleEffect(0.3 + geometryProxy.frame(in: .global).minY / fullView.size.height)
                             }
                     }
                     .frame(height: 40)
