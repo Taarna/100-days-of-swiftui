@@ -12,10 +12,10 @@ struct ContentView: View {
             ScrollView(.vertical) {
                 ForEach(0..<50) { index in
                     GeometryReader { proxy in
-                        Text("Row #\(index)")
+                        Text("Row #\(proxy.frame(in: .global).midY)")
                             .font(.title)
                             .frame(maxWidth: .infinity)
-                            .background(colors[index % 7])
+                            .background(Color(hue: min(proxy.frame(in: .global).minY/fullView.size.height, 1), saturation: 1, brightness: 1))
                             .rotation3DEffect(.degrees(proxy.frame(in: .global).minY - fullView.size.height / 2) / 5, axis: (x: 0, y: 1, z: 0))
                             .visualEffect { content, geometryProxy in
                                 content
