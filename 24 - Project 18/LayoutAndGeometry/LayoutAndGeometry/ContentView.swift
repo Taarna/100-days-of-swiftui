@@ -5,42 +5,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    let items = ["I", "just", "finished", "Day 92 of the", "#100DaysOfSwiftUI"]
-    @State private var itemsSizes = [CGFloat](repeating: 0.0, count: 5)
+    let colors: [Color] = [.red, .green, .blue, .orange, .pink, .purple, .yellow]
     
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Image(.background)
-                
-                VStack(alignment: .leading, spacing: 20) {
-                    ForEach(items.indices, id: \.self) { index in
-                        Text(items[index])
-                            .fontWeight(.bold)
-                            .padding()
-                            .background(Color.black.opacity(0.7))
-                            .background(
-                                GeometryReader { proxy in
-                                    Color.clear
-                                        .preference(key: SizePreferenceKey.self, value: proxy.size)
-                                }
-                            )
-                            .onPreferenceChange(SizePreferenceKey.self) { size in
-                                itemsSizes[index] = size.width
-                            }
-                            .alignmentGuide(.leading) { _ in
-                                -itemsSizes.prefix(index).reduce(0, +)
-                            }
-                    }
+        
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 16) {
+                ForEach(1..<20) { num in
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.teal)
+                        .frame(height: 90)
+                        .visualEffect { content, proxy in
+                            content
+                                .hueRotation(Angle(degrees: proxy.frame(in: .global).origin.y) / 10)
+                        }
                 }
             }
+            .scrollTargetLayout()
         }
-    }
-}
-
-struct SizePreferenceKey: PreferenceKey {
-    static var defaultValue: CGSize = .zero
-    static func reduce(value: inout CGSize, nextValue: () -> CGSize) {
-        value = nextValue()
+        .scrollTargetBehavior(.viewAligned)
+        
     }
 }
